@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet type="text/xsl" href="trasformazione.xsl"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<TEI xml:lang="it" xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- 
+         COMANDO TERMINALE PER DOM COUNTER (il primo per verificare l'xml e il secondo per verificare l'xml secondo la dtd: Tei P5)
+         
+         java -cp ".;.\xerces-2_12_2\*" dom.Counter rassegna.xml
+         
+         java -cp ".;.\xerces-2_12_2\*" dom.Counter -v rassegna.xml 
+         
+    -->
+    <!-- HEADER -->
+    <teiHeader xml:lang="it">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    LA RASSEGNA SETTIMANALE DI POLITICA, SCIENZE, LETTERE ED ARTI in versione digitale
+                </title>
+                <respStmt>
+                    <resp>Conversione TEI P5 a cura di:</resp>
+                    <persName ref="https://github.com/ludovicogiannetti">Ludovico Giannetti</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Università di Pisa</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <date>2026</date>
+                <availability status="free">
+                    <p>Il progetto è consultabile liberamente su: <ref target="https://github.com/ludovicogiannetti/progetto_CdT_Giannetti">github.com/ludovicogiannetti</ref>
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic xml:id="Articolo_1">
+                        <title level="a">L'INCHIESTA AGRARIA</title>
+                        <textLang mainLang="it">Italiano</textLang>
+                    </analytic>
+                    <analytic xml:id="Articolo_2">
+                        <title level="a">LA ROBA</title>
+                        <textLang mainLang="it">Italiano</textLang>
+                    </analytic>
+                    <analytic xml:id="Bibliografia">
+                        <title level ='a'>BIBLIOGRAFIA</title>
+                        <textLang mainLang="it">Italiano</textLang>
+                    </analytic>
+
+                    <analytic xml:id="Notizie">
+                        <title level ='a'>NOTIZIE</title>
+                        <textLang mainLang="it">Italiano</textLang>
+                    </analytic>
+                    <monogr>
+                        <title level="j">La Rassegna Settimanale di Politica, Scienze, Lettere ed Arti</title>
+                        <idno type="url">https://rassegnasettimanale.animi.it/</idno>
+                        <textLang mainLang="it">Italiano</textLang>
+                        <respStmt>
+                            <resp>Proprietari e direttori</resp>
+                            <name>Leopoldo Franchetti</name>
+                            <name>Sidney Sonnino</name>
+                        </respStmt>
+                        <imprint>
+                            <publisher>Tip. della Rassegna Settimanale</publisher>
+                            <pubPlace>Roma</pubPlace>
+                            <date when="1880">1880</date>
+                        </imprint>
+                        <biblScope unit="volume">6</biblScope>
+						<biblScope unit="issue">156</biblScope>
+                        <biblScope unit="page" corresp="Articolo_1">402-403</biblScope>
+                        <biblScope unit="page" corresp="Articolo_2">406-407</biblScope>
+                        <biblScope unit="page" corresp="Bibliografia">414-415</biblScope>
+                        <biblScope unit="page" corresp="Notizie">415</biblScope>
+                    </monogr>
+                </biblStruct>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Il progetto di digitalizzazione della <hi rend="italic">Rassegna Settimanale di Politica, Scienze, Lettere ed Arti</hi> è stato realizzato da Ludovico Giannetti nell'ambito del corso di <hi rend="bold">Codifica di Testi</hi> presso l'Università di Pisa.</p>
+                <p>Il processo ha coinvolto la trascrizione accurata dei testi, l'annotazione semantica secondo le linee guida TEI P5 e la creazione di un'interfaccia XSL per la consultazione digitale.</p>
+                <p>Sono stati codificati due articoli, due entrate nella sezione bibliografia e tre entrate nella sezione notizie, tutti tratti dal fascicolo 156 del volume 6. I due articoli giornalistici sono: <hi rend="italic">L'inchiesta agraria</hi> e la novella <hi rend="italic">La roba</hi> di Giovanni Verga. Per quanto riguarda la sezione notizie, le due entrate sono: <hi rend="italic">Ettore Novelli, Ero e Leandro, (dal greco)</hi> e <hi rend="italic">  Ernesto Monaci, Il Mistero provenzale di S. Agnese, facsimile in eliotipia dell' unico manoscritto Chigiano, con prefazione</hi>.</p> 
+                <p>La codifica comprende marcatura strutturale, semantica, facsimilare e apparati di back-matter (listPerson, listPlace, listOrg).</p>
+                <p>L'edizione digitale permette di navigare tra le pagine originali della rivista tramite i pulsanti con frecce, e all'interno di ogni pagina di scorrere i paragrafi grazie ai comandi su e giù. È possibile evidenziare categorie semantiche (persone, luoghi, organizzazioni, termini, correzioni, date, ecc.) selezionando i filtri principali: per ogni categoria si apre un sottomenù che consente di evidenziare singoli sottotipi, ciascuno con un colore diverso. Le parole evidenziate mantengono lo stesso colore del bottone selezionato. I sottotipi specificano con maggior dettaglio l'ambito di cui il termine a cui si riferiscono fa parte. L'interfaccia affianca il testo trascritto alle immagini delle pagine originali, con zone cliccabili che attivano il paragrafo corrispondente. Tutti gli elementi che presentano un elemento collegato nel back con un collegamento ipertestuale, sono sottolineati con una linea tratteggiata e cambiano il colore del proprio background passando il mouse sopra; inoltre, se cliccati, riportano alla pagina esterna collegata a quella determinata parola.</p>
+                <p>Il testo è stato codificato nel rispetto delle linee guida ufficiali
+                    <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI P5</ref>.
+                </p>
+                <p>Il progetto è gratuitamente disponibile al seguente link: <ref target="https://github.com/ludovicogiannetti/progetto_CdT_Giannetti">progetto codifica (Github Ludovico Giannetti)</ref></p>
+            </projectDesc>
+            <editorialDecl>
+                <normalization>
+                    <p>Sono stati normalizzati i termini ritenuti non comuni, arcaici o letterari. La codifica presenta la forma originale, la normalizzazione è visualizzabile passando il mouse sopra al termine</p>
+                </normalization>
+                <correction>
+                    <p>Sono stati corretti gli errori presenti nel testo, principalmente presenti sotto forma di accentazione sbagliata o nomi trascritti in modo errato. La codifica presenta la forma originale, la correzione è visualizzabile passando il mouse sopra al termine</p>
+                </correction>
+            </editorialDecl>
+            <tagsDecl>
+                <namespace name="http://www.tei-c.org/ns/1.0">
+                    <tagUsage gi="abbr">Utilizzato per abbreviazioni (es. “on.”, “v.”, “r.”, “sig.”).</tagUsage>
+                    <tagUsage gi="author">Autore di un'opera bibliografica.</tagUsage>
+                    <tagUsage gi="bibl">Voce bibliografica.</tagUsage>
+                    <tagUsage gi="body">Corpo principale del testo.</tagUsage>
+                    <tagUsage gi="cb">Cambio di colonna (con attributo n).</tagUsage>
+                    <tagUsage gi="choice">Racchiude coppie di varianti testuali (orig/reg, sic/corr, abbr/expan).</tagUsage>
+                    <tagUsage gi="corr">Correzione di un errore (in choice).</tagUsage>
+                    <tagUsage gi="date">Data storica (con attributi when, period, from, to).</tagUsage>
+                    <tagUsage gi="distinct">Parole marcate come arcaiche, letterarie, regionalismi, ecc. (con attributo type).</tagUsage>
+                    <tagUsage gi="div">Divisione strutturale principale: articoli (type="article"), bibliografia (type="bibliography"), notizie (type="news").</tagUsage>
+                    <tagUsage gi="expan">Espansione di un'abbreviazione (in choice).</tagUsage>
+                    <tagUsage gi="facsimile">Contiene le riproduzioni digitali delle pagine (immagini e zone).</tagUsage>
+                    <tagUsage gi="foreign">Testo in lingua straniera (latino, greco).</tagUsage>
+                    <tagUsage gi="graphic">Immagine di una pagina (url, width, height).</tagUsage>
+                    <tagUsage gi="group">Raggruppa i diversi testi (articoli, bibliografia, notizie).</tagUsage>
+                    <tagUsage gi="head">Titolo di sezione (articolo, bibliografia, notizie).</tagUsage>
+                    <tagUsage gi="idno">Identificativo (es. segnatura di un manoscritto).</tagUsage>
+                    <tagUsage gi="item">Elemento di una lista (es. notizia).</tagUsage>
+                    <tagUsage gi="lb">Linea di testo originale (con attributo n e break).</tagUsage>
+                    <tagUsage gi="list">Lista di notizie (type="news_items").</tagUsage>
+                    <tagUsage gi="listPerson">Elenco di persone (back).</tagUsage>
+                    <tagUsage gi="listPlace">Elenco di luoghi (back).</tagUsage>
+                    <tagUsage gi="listOrg">Elenco di organizzazioni (back).</tagUsage>
+                    <tagUsage gi="locus">Indicazione di fogli/pagine in un manoscritto (attributi from, to).</tagUsage>
+                    <tagUsage gi="measure">Misure (valute, tempo, quantità, con attributi type, unit, quantity).</tagUsage>
+                    <tagUsage gi="note">Nota a piè di pagina o informazione aggiuntiva (attributo place).</tagUsage>
+                    <tagUsage gi="num">Numeri (cardinali, ordinali, con attributi type, value).</tagUsage>
+                    <tagUsage gi="orgName">Nome di organizzazione/istituzione (con corresp al back).</tagUsage>
+                    <tagUsage gi="orig">Forma originale (normalizzazione).</tagUsage>
+                    <tagUsage gi="pb">Page break (numerazione pagina).</tagUsage>
+                    <tagUsage gi="persName">Nome di persona (con corresp al back).</tagUsage>
+                    <tagUsage gi="placeName">Nome di luogo (con corresp al back).</tagUsage>
+                    <tagUsage gi="ptr">Collegamento esterno (es. Wikipedia).</tagUsage>
+                    <tagUsage gi="pubPlace">Luogo di pubblicazione (bibliografia).</tagUsage>
+                    <tagUsage gi="publisher">Editore (bibliografia).</tagUsage>
+                    <tagUsage gi="q">Discorso diretto (dialogo).</tagUsage>
+                    <tagUsage gi="reg">Forma normalizzata (normalizzazione).</tagUsage>
+                    <tagUsage gi="rs">Stringa generica (ruoli, eventi, ecc., con attributi type, subtype).</tagUsage>
+                    <tagUsage gi="sic">Forma errata originale (correzione).</tagUsage>
+                    <tagUsage gi="signed">Firma dell'autore.</tagUsage>
+                    <tagUsage gi="surface">Superficie (pagina) nel facsimile.</tagUsage>
+                    <tagUsage gi="term">Termine specialistico (con attributi type, subtype).</tagUsage>
+                    <tagUsage gi="text">Testo (contenitore principale).</tagUsage>
+                    <tagUsage gi="title">Titolo di opera (bibliografia).</tagUsage>
+                    <tagUsage gi="zone">Area cliccabile sull'immagine (collegata al paragrafo).</tagUsage>
+                </namespace>
+            </tagsDecl>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="pg1">
+            <graphic url='img/InchiestaAgraria-1-Blurred.png' width='2296.4px' height='3396.4px' />
+            <zone xml:id="z1" ulx="1149" uly="1350" lrx="2207" lry="2183" />
+            <zone xml:id="z2" ulx="1163" uly="2190" lrx="2183" lry="2391" />
+            <zone xml:id="z3" ulx="1149" uly="2401" lrx="2188" lry="3004" />
+        </surface>
+        <surface xml:id="pg2">
+            <graphic url='img/InchiestaAgraria-2-Blurred.png' width='2300.4px' height='3390.4px' />
+            <zone xml:id="z4" ulx="79" uly="180" lrx="1113" lry="474" />
+            <zone xml:id="z5" ulx="65" uly="487" lrx="1114" lry="768" />
+            <zone xml:id="z6" ulx="86" uly="786" lrx="1123" lry="1247" />
+            <zone xml:id="z7" ulx="85" uly="1259" lrx="1130" lry="1585" />
+            <zone xml:id="z8" ulx="93" uly="1598" lrx="1129" lry="1720" />
+            <zone xml:id="z9" ulx="110" uly="1724" lrx="1130" lry="2135" />
+            <zone xml:id="z10" ulx="107" uly="2164" lrx="1142" lry="2827" />
+            <zone xml:id="z11" ulx="115" uly="2846" lrx="1145" lry="3042" />
+            <zone xml:id="z11.1" ulx="1121" uly="186" lrx="2143" lry="432" />
+            <zone xml:id="z12" ulx="1133" uly="448" lrx="2163" lry="901" />
+            <zone xml:id="z13" ulx="1139" uly="919" lrx="2167" lry="1508" />
+        </surface>
+        
+        <surface xml:id="pg3">
+            <graphic url='img/LaRoba-1-Blurred.png' width='2382.4px' height='3399.4px' />
+            <zone xml:id="z14" ulx="213" uly="820" lrx="1248" lry="2851" />
+            <zone xml:id="z15" ulx="244" uly="2874" lrx="1254" lry="3076" />
+            <zone xml:id="z15.1" ulx="1259" uly="199" lrx="2290" lry="1392" />
+            <zone xml:id="z16" ulx="1264" uly="1403" lrx="2296" lry="2601" />
+            <zone xml:id="z17" ulx="1271" uly="2608" lrx="2289" lry="3085" />
+        </surface>
+        
+        <surface xml:id="pg4">
+            <graphic url='img/LaRoba-2-Blurred.png' width='2377.4px' height='3415.4px' />
+            <zone xml:id="z18" ulx="137" uly="222" lrx="1163" lry="612" />
+            <zone xml:id="z19" ulx="144" uly="617" lrx="1174" lry="1513" />
+            <zone xml:id="z20" ulx="153" uly="1519" lrx="1179" lry="2021" />
+            <zone xml:id="z21" ulx="156" uly="2035" lrx="1181" lry="2974" />
+            <zone xml:id="z22" ulx="159" uly="2982" lrx="1195" lry="3103" />
+            <zone xml:id="z22.1" ulx="1181" uly="224" lrx="2199" lry="390" />
+            <zone xml:id="z23" ulx="1183" uly="396" lrx="2207" lry="786" />
+            <zone xml:id="z24" ulx="1191" uly="793" lrx="2214" lry="1344" />
+            <zone xml:id="z25" ulx="1198" uly="1356" lrx="2219" lry="1607" />
+        </surface>
+        
+        <surface xml:id="pg5">
+            <graphic url='img/Bibliografia-1-Blurred.png' width='2342.4px' height='3385.4px' />
+            <zone xml:id="z26" ulx="1205" uly="1807" lrx="2224" lry="3039" />
+        </surface>
+        
+        <surface xml:id="pg6">
+            <graphic url='img/Bibliografia-2.jpg' width='2233.4px' height='3366.4px' />
+            <zone xml:id="z26-cont" ulx="75" uly="143" lrx="1111" lry="1863" />
+            <zone xml:id="z27" ulx="85" uly="1871" lrx="1106" lry="3023" />
+            <zone xml:id="z27.1" ulx="1124" uly="148" lrx="2137" lry="403" />
+            <zone xml:id="z28" ulx="1113" uly="431" lrx="2163" lry="877" />
+            <zone xml:id="z29" ulx="1119" uly="886" lrx="2148" lry="1910" />
+            <zone xml:id="z30" ulx="1129" uly="1920" lrx="2169" lry="3029" />
+        </surface>
+        <surface xml:id="pg7">
+            <graphic url='img/Notizie-blurred.png' width='2257.4px' height='3313.4px' />
+            <zone xml:id="z31" ulx="1165" uly="2585" lrx="2159" lry="2656" />
+            <zone xml:id="z32" ulx="1169" uly="2666" lrx="2165" lry="2732" />
+            <zone xml:id="z33" ulx="1165" uly="2748" lrx="2163" lry="2807" />
+        </surface>
+    </facsimile>
+
+    <text>
+        <group>
+            <text>
+                <front>
+                </front>
+                <body>
+                    <!--ARTICOLO 1-->
+                    <div type="article" xml:id="articolo_1">
+                        
+                        <!--PAGINA 1-->
+                        
+                        <pb n="1"/>
+                        <cb n="1"/>
+
+                        <head>L'INCHIESTA AGRARIA</head>
+
+                            <p corresp="#z1">
+                                <lb n="1" />Se tutte le <term type="inquiry">inchieste</term> rassomigliassero a questa, si do-
+                                <lb n="2" break="no" />vrebbe proprio concludere che tale maniera d'<term type="inquiry">indagini</term>, così 
+                                <lb n="3" />feconda in <placeName type="country" corresp="#Inghilterra">Inghilterra</placeName> e in altre <choice><orig><placeName>contrade</placeName></orig><reg>territori</reg></choice>, non può attec-
+                                <lb n="4" break="no" />chire in <placeName type="country" corresp="#Italia">Italia</placeName>. È ormai antica la legge del <date when="1877-03-15">15 marzo 1877</date>,
+                                <lb n="5" />che ordinò <term type="inquiry" subtype="agriculture">l'inchiesta agraria</term>, accordando per il suo compi-
+                                <lb n="6" break="no" />mento <measure type="currency" unit="LIT" quantity="60000">60 mila lire</measure> e <measure type="time" unit="year" quantity="due">due anni</measure> di tempo, e crediamo di non 
+                                <lb n="7" />esagerare dicendo <choice><orig>, che</orig><reg>che</reg></choice> siamo più lontani dalla <choice><orig>mèta </orig><reg>meta </reg></choice> <choice><orig>, che</orig><reg>rispetto a quando</reg></choice>
+                                <lb n="8" />si <choice><orig>movevano</orig><reg>muovevano</reg></choice> i primi passi. Dell'<term type="inquiry">inchiesta</term>, che alcuni
+                                <lb n="9" />volevano avesse carattere tecnico, altri raccomandavano
+                                <lb n="10" />badasse soprattutto alle condizioni <choice><orig>de'</orig><reg >dei</reg></choice> nostri <term type="occupation" subtype="agriculture">contadini</term>,
+                                <lb n="11" /><choice><orig>s'era</orig><reg >si era</reg></choice> parlato a lungo in <orgName type="institution" subtype="legislative" corresp="#Parlamento">Parlamento</orgName> e fuori; il <orgName type="institution" subtype="executive" corresp="#Ministero">Ministero</orgName>,
+                                <lb n="12" />con le sue relazioni sullo stato dell'<term type="activity" subtype="agriculture">agricoltura</term>, le aveva
+                                <lb n="13" />preparato materia abbondante e pregevole; volendo e sa-
+                                <lb n="14" break="no" />pendo, il concorso <choice><orig>de'</orig><reg>dei</reg></choice> <orgName type="institution" subtype="agriculture" corresp="#Comizi">Comizi</orgName> o di molte persone intelligenti 
+                                <lb n="15" />e volenterose non sarebbe mancato. Ma non si profittò di
+                                <lb n="16" />queste favorevoli contingenze, e adesso la matassa è <choice><orig>sì</orig><reg >così</reg></choice> ar-
+                                <lb n="17" break="no" />ruffata e la sfiducia <choice><orig>sì</orig><reg >così</reg></choice> piena e giustificata che, lo ripetiamo,
+                                <lb n="18" />ogni speranza di salute sarebbe vana.
+                            </p>
+                            <p corresp="#z2">
+                                <lb n="19" />Però, se il male, per quanto si riferisce al metodo pre-
+                                <lb n="20" break="no" />scritto a <choice><orig>coteste</orig><reg >codeste</reg></choice> <term type="inquiry" subtype="agriculture">indagini</term>, <choice><orig>apparisce</orig><reg >appare</reg></choice> irrimediabile, non è inop-
+                                <lb n="21" break="no" />portuno <choice><orig>di studiarne</orig><reg>studiarne</reg></choice> le <choice><orig>cagioni</orig><reg>cause</reg></choice>; affinchè, qualora i nostri
+                                <lb n="22" /><rs type="occupation" subtype="political"> rappresentanti </rs> siano suscettibili di ravvedimento, non si ca-
+                                <lb n="23" break="no" />schi un'altra volta <choice><orig>ne'</orig><reg >nei</reg></choice> medesimi guai.
+                            </p>
+                            <p corresp="#z3">
+                                <lb n="24" />Sommamente inopportuna fu la scelta fatta dal <orgName type="institution" subtype="executive" corresp="#Governo">governo</orgName>
+                                <lb n="25" />delle <num type="cardinal" value="4">quattro</num> persone che dovevano rappresentarlo in seno
+                                <lb n="26" />alla <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta d'inchiesta</orgName>, la quale, come ognuno sa, doveva
+                                <lb n="27" />contare altri <num type="cardinal" value="8">otto</num> componenti eletti dalla <orgName type="institution" subtype="legislative" corresp="#Camera">Camera</orgName> e dal <orgName type="institution" subtype="legislative" corresp="#Senato">Se-
+                                <lb n="28" break="no" />nato</orgName>. Dopo che la <orgName type="institution" subtype="legislative" corresp="#Camera">Camera</orgName> e il <orgName type="institution" subtype="legislative" corresp="#Senato">Senato</orgName> ebbero nominati i
+                                <lb n="29" />loro rispettivi <rs type="occupation" subtype="political"> rappresentanti </rs>, ognuno attendeva che l'<choice><abbr type="occupation" subtype="political">on.</abbr> <expan>onorevole</expan></choice>
+                                <lb n="30" break="no" /><choice><sic><persName role="politician" corresp="#Giuseppe_Majorana">Maiorana </persName> </sic><corr> <persName role="politician" corresp="#Giuseppe_Majorana"> Majorana </persName> </corr></choice>, allora <rs type="occupation" subtype="political">Ministro</rs> di '<term type="istitution" subtype="agriculture">Agricoltura</term> e <term type="istitution" subtype="economy">Commercio</term>,
+                                <lb n="31" />avesse, mediante le nomine che dipendevano da lui, raffor-
+                                <lb n="32" break="no" />zato l'elemento tecnico della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, con uomini di ricono-
+                                <lb n="33" break="no" />sciuta competenza ed operosità. Invece chiamò a far parte
+                                <lb n="34" />di essa altri <num type="cardinal" value="4">quattro</num> <rs type="occupation" subtype="political">deputati</rs>, uomini politici, scelti col solo
+                                <lb n="35" />criterio della <placeName>regione</placeName> a cui appartenevano, e così turbò
+                                <lb n="36" />l'equilibrio della composizione della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, e non aumentò
+                                <lb n="37" />certamente <choice><sic>nè</sic><corr >né</corr></choice> l'autorità sua <choice><sic>nè</sic><corr >né</corr></choice> la sua efficacia. 
+                            </p>
+
+                            <pb n="2"/>
+                        
+                            <!-- PAGINA 2 -->
+
+
+                            <cb n="2"/>
+                            <p corresp="#z4">
+                                <lb n="38" />La <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> si adunò, la prima volta, il <date when="1877-04-30">30 aprile 1877</date>;
+                                <lb n="39" />conferì la <rs type="occupation" subtype="political">presidenza</rs> e la <rs type="occupation" subtype="political">vice-presidenza</rs> al <persName role="politician" corresp="#Stefano_Jacini">Senatore Ja-
+                                <lb n="40" break="no" />cini</persName> e al <persName role="politician" corresp="#Agostino_Bertani">Deputato Bertani</persName>, e affidò poi l'ufficio di <rs type="occupation"  subtype="political">segre-
+                                <lb n="41" break="no" />tario</rs> a un <rs type="occupation"> impiegato </rs> del <orgName type="institution" subtype="executive" corresp="#Ministero">Ministero</orgName>, dichiarando, son parole testuali, <quote>le incombenze della segreteria incompatibili con
+                                <lb n="42" />quelle dello speciale mandato inquirente </quote>. Vedremo poi come
+                                <lb n="43" />questa massima sia stata rispettata.
+                            </p>
+
+                            <p corresp="#z5">
+                                <lb n="44" />Dopo ciò si ripartirono le <choice><orig><placeName>provincie</placeName></orig><reg><placeName>province</placeName></reg></choice> del <placeName type="country" corresp="#Italia">regno</placeName> in <num type="cardinal" value="12">dodici</num>
+                                <lb n="45" /><rs type="region">regioni</rs> e ciascun <rs type="occupation" subtype="political">Commissario</rs> ne prese <num type="cardinal" value="1">una</num>, per studiarne
+                                <lb n="46" />le condizioni. Pessimo sistema, che doveva togliere ai la-
+                                <lb n="47" break="no" />vori della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> ogni carattere d'unità; ma che non ebbe
+                                <lb n="48" />quest'effetto, unicamente perché i componenti della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>,
+                                <lb n="49" />meno qualche eccezione, reputarono più utile di non lavo-
+                                <lb n="50" break="no" />rare affatto.
+                            </p>
+                            <p corresp="#z6">
+                                <lb n="51" />Fin d'allora può dirsi che la <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> inalberasse la di-
+                                <lb n="52" break="no" />visa <foreign xml:lang="lat">otium cum dignitate</foreign>, perché aprì subito un Concorso a
+                                <lb n="53" />premi d'onore per la compilazione di memorie intorno alle con-
+                                <lb n="54" break="no" />dizioni dell''<term type="activity" subtype="agriculture">agricoltura</term> e delle <term type="occupation" subtype="agriculture">classi agricole</term>. Ma non le
+                                <lb n="55" />venne fatto d'indurre gli altri ad adempiere l'ufficio suo, e
+                                <lb n="56" />poiché pochi si presentarono alla gara, e di quei pochi <choice><orig>niuno </orig><reg >nessuno</reg></choice>
+                                <lb n="57" />fece buona prova, la <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, sempre feconda di espedienti
+                                <lb n="58" />per <choice><orig>cansar fatica </orig><reg>non faticare</reg></choice>, domandò ed ottenne con la legge del <date when="1878-12-12">12 
+                                <lb n="59" break="no" />dicembre 1878</date> una nuova somma di<measure type="currency" unit="LIT" quantity="125000">125.000 lire</measure> da erogarsi
+                                <lb n="60" />in premi per monografie e la proroga di <measure type="time" unit="year" quantity="4">quattro anni</measure>, per con-
+                                <lb n="61" />durre a termine il compito suo.
+                            </p>
+                            <p corresp="#z7">
+                                <lb n="62" />Venuti i <measure type="currency">quattrini</measure>, anche le monografie vennero in
+                                <lb n="63" /><choice><orig>molta copia</orig><reg>grande quantità</reg></choice>; ma non venne ai componenti la <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> la
+                                <lb n="64" />volontà di leggerle. Reputarono più <choice><orig>comodo di affidare</orig><reg>comodo affidare</reg></choice> a
+                                <lb n="65" />persone estranee il giudizio sulle monografie presentate, e
+                                <lb n="66" />alcuni si studiarono solo di raccomandare <persName type="fictional">Tizio</persName>, <persName type="fictional">Caio</persName> e
+                                <lb n="67" /><persName type="fictional">Sempronio</persName> per un premio od una menzione, anche quando
+                                <lb n="68" />non entrassero <choice><orig>ne'</orig><reg >nei</reg></choice> termini assegnati al Concorso o fosse
+                                <lb n="69"/>chiara e provata la loro insufficienza.
+                            </p>
+                            <p corresp="#z8">
+                                <lb n="70" />E <choice><orig>dopoché</orig><reg >dopo che</reg></choice> queste persone estranee ebbero <choice><orig>pronunziato</orig><reg >pronunciato</reg></choice>
+                                <lb n="71" />il voto loro, le monografie, buone e cattive, si misero a
+                                <lb n="72" />dormire e nessuno pensa a pubblicarle.
+                            </p>
+                            <p corresp="#z9">
+                                <lb n="73" />Intanto, per quanto si sa, in una sola <rs type="region">regione</rs>, nella
+                                <lb n="74" /><placeName type="region" corresp="#Toscana">Toscana</placeName>, si attende lodevolmente a fare l'<term type="inquiry" subtype="agriculture">inchiesta</term>, con
+                                <lb n="75" />quel sistema di ricerche individuali di cui si è detto. Ma,
+                                <lb n="76" />chi è il componente della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> che lavora in <placeName corresp="#Toscana">Toscana</placeName>
+                                <lb n="77" />per suo conto? Non è un <rs type="occupation">Commissario</rs>; <choice><orig>sibbene </orig><reg>bensì </reg></choice> il signor
+                                <lb n="78" /><persName role="politician" corresp="#Mazzini">Mazzini</persName>, valente <rs type="occupation">impiegato</rs> del <orgName type="institution" subtype="executive" corresp="#Ministero">ministero di '<term type="activity" subtype="agriculture">agricoltura</term></orgName>, che
+                                <lb n="79" />teneva l'ufficio di <rs type="occupation">segretario</rs> della <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, e che da <measure type="time" unit="month" min="8" max="9">otto o
+                                <lb n="80" break="no" />nove mesi</measure> risiede a <placeName type="city" corresp="#Firenze">Firenze</placeName> per adempiere quello speciale
+                                <lb n="81" />mandato inquirente, che era incompatibile <choice><orig>colle </orig><reg>con le </reg></choice> incombenze
+                                <lb n="82" />della segreteria.
+                            </p>
+                            <p corresp="#z10">
+                                <lb n="83" />Non sappiamo che cosa dovranno pensare di ciò gli <orgName type="institution" subtype="collective" corresp="#alti_corpi">alti
+                                <lb n="84" break="no" />corpi dello Stato</orgName>, che hanno riposto la loro fiducia <choice><orig>ne'</orig><reg >nei</reg></choice> <rs type="occupation" subtype="political">de-
+                                <lb n="85" break="no" />legati</rs> propri; ignoriamo che cosa dirà il <placeName type="country" corresp="#Italia">paese</placeName>, se pure 
+                                <lb n="86" />dirà qualche cosa, quando vedrà che i suoi <rs type="occupation">mandatari</rs> do-
+                                <lb n="87" break="no" />vettero ricorrere per aiuto a un modesto <rs type="occupation">ufficiale</rs> dello
+                                <lb n="88" /><orgName type="institution" subtype="executive" corresp="#Stato">Stato</orgName>. Noi invece ci rallegriamo che, almeno in una <rs type="region">regione</rs> 
+                                <lb n="89" />(disgraziatamente è per l'appunto una di quelle le cui con-
+                                <lb n="90" break="no" />dizioni  <term type="natural" subtype="agriculture">agrarie</term> son meglio note e <choice><orig>ove</orig><reg >dove</reg></choice> le sofferenze <choice><orig>de'</orig><reg >dei</reg></choice> <term type="occupation" subtype="agriculture">con-
+                                <lb n="91" break="no" />tadini</term> <choice><orig>appariscono</orig><reg >appaiono</reg></choice>, in generale, meno acerbe) almeno in una 
+                                <lb n="92" /><rs type="region">regione</rs>, si faccia l'<term type="inquiry" subtype="agriculture">inchiesta</term>; e deploriamo soltanto che i
+                                <lb n="93" /><rs type="occupation">commissari</rs>, i quali riconobbero da tanto tempo la loro impo-
+                                <lb n="94" break="no" />tenza, non abbiano adottato il medesimo sistema per tutte
+                                <lb n="95" />le <placeName>provincie</placeName> del <placeName corresp="#Italia">regno</placeName>. In tal modo procedendo, si sarebbe
+                                <lb n="96" />compiuta abbastanza bene un'<term type="inquiry" subtype="agriculture">inchiesta</term> di carattere ammini-
+                                <lb n="97" break="no" />strativo; mentre, dalla <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> non avremo mai, né <term type="inquiry" subtype="agriculture">in-
+                                <lb n="98" />chiesta</term> <term type="istitution" subtype="administration">amministrativa</term>, né <term type="istitution" subtype="parliamentary" corresp="#Parlamento">parlamentare</term>.
+                            </p>
+                            <p corresp="#z11">
+                                <lb n="99" />Per amore di verità dobbiamo anche dichiarare che nella
+                                <lb n="100" /><orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName> non mancarono dissensi e querele. Voleva l'<choice><abbr type="occupation" subtype="political">on.</abbr> <expan>onorevole</expan></choice> <persName role="politician" corresp="#Agostino_Bertani">Ber-
+                                <lb n="101" break="no" />tani</persName> che l'<term type="activity" subtype="inquiry">inchiesta</term> si rivolgesse specialmente allo studio delle 
+                                <lb n="102" />condizioni <choice><orig>de'</orig><reg >dei</reg></choice> <rs type="occupation">lavoratori</rs>; mentre l'<choice><abbr type="occupation" subtype="political">on.</abbr> <expan>onorevole</expan></choice> <choice><sic><persName role="politician" corresp="#Stefano_Jacini">Jacini</persName></sic> <corr corresp="#Stefano_Jacini">Iacini</corr></choice>  e altri con lui in- 
+                                <lb n="103" break="no" />tendevano a darle maggior larghezza. Si può dire che il pub-
+                                
+                                <cb n="3"/>
+
+                                <lb n="104" break="no" />blico avrebbe ignorato l'esistenza della
+                                <lb n="105" /><orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, se non fosse
+                                <lb n="106" />pervenuta al suo orecchio l'eco di questi <choice><orig>dispareri </orig><reg>dissentimenti</reg></choice>; ma si
+                                <lb n="107" />può dire altresì che, dopo aver molto discusso se dovesse
+                                <lb n="108" />farsi più o meno e <choice><orig>qual</orig><reg>quale</reg></choice> soggetto dovesse avere la prece-
+                                <lb n="109" break="no" />denza e la prevalenza, si finì col non concludere nulla
+                                <lb n="110" />di nulla.
+                            </p>
+                            <p corresp="#z12">
+                                <lb n="111" />Ora a chi ci domandasse che via <choice><orig>s'ha da pigliare</orig><reg>bisogna prendere</reg></choice> per
+                                <lb n="112" />giungere a qualche effetto, noi risponderemmo che conviene
+                                <lb n="113" />anzitutto <choice><orig>toglier</orig><reg>togliere</reg></choice> di mezzo quel simulacro di <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, che
+                                <lb n="114" /><choice><orig>s'è</orig><reg>si è</reg></choice> <choice><orig>chiarita</orig><reg>dimostrata</reg></choice> troppo <choice><orig>disadatta</orig><reg>inadatta</reg></choice> al fine. <measure type="time" unit="year" quantity="quattro">Quattro anni</measure> oramai
+                                <lb n="115" />ci ha fatto perdere, e sarebbe pazzia lo sperare che si ri-
+                                <lb n="116" break="no" />metta in gambe. Si salvino le suscettibilità e si metta a di-
+                                <lb n="117" break="no" />sposizione del pubblico il materiale utile raccolto, facendo
+                                <lb n="118" />pubblicare le monografie premiate e i lavori che qualche
+                                <lb n="119" /><rs type="occupation">commissario</rs> operoso abbia condotto a termine; si votino
+                                <lb n="120" />alla <orgName type="institution" subtype="inquiry" corresp="#Giunta_Inchiesta">Giunta</orgName>, se si vuole, gli onori del trionfo, ma, per ca-
+                                <lb n="121" break="no" />rità, la si rimandi a casa.
+                            </p>
+
+                            <p corresp="#z13">
+                                <lb n="122" />Intanto la <orgName type="institution" subtype="legislative" corresp="#Camera">Camera</orgName> potrebbe invitare il <orgName type="institution" subtype="executive" corresp="#Governo">Governo</orgName> a rispon-
+                                <lb n="123" break="no" />dere ad un breve e succoso interrogatorio, sia sullo stato
+                                <lb n="124" />tecnico ed economico dell''<term type="activity" subtype="agriculture">agricoltura</term> <placeName type="country" corresp="#Italia">italiana</placeName>, sia sulle con-
+                                <lb n="125" break="no" />dizioni dei <term type="occupation" subtype="agriculture">contadini</term>. La direzione dell''<term type="activity" subtype="agriculture">agricoltura</term>, che <choice><orig>non
+                                <lb n="126" break="no" />ostante</orig><reg>nonostante</reg></choice> l'incubo dell'<term type="inquiry" subtype="agriculture">inchiesta</term> ha saputo condurre a fine
+                                <lb n="127" />pregevoli lavori di non piccola mole (citeremo tra i più
+                                <lb n="128" />recenti quello che si riferisce alla pellagra)saprebbe, non
+                                <lb n="129" />ne dubitiamo, fare il dover suo, presentando con sollecitu-
+                                <lb n="130" break="no" />dine una nuova e copiosa raccolta di notizie, razionalmente
+                                <lb n="131" />ordinate e vagliate, e lucidamente analizzate, e che forni-
+                                <lb n="132" break="no" />rebbe un'ampia base agli studi del <orgName type="institution" subtype="legislative" corresp="#Parlamento">Parlamento</orgName> e ai prov-
+                                <lb n="133" break="no" />vedimenti legislativi. Il resto si lasci all'iniziativa privata,
+                                <lb n="134" />l'azione della quale è stata turbata anziché assecondata
+                                <lb n="135" />dalla pomposa e sterile <term type="inquiry" subtype="agriculture">inchiesta</term> ufficiale.
+                            </p>
+                    </div>
+
+                    
+
+                    <div type="article" xml:id="articolo_2">
+                        <pb n="3"/>
+                        <cb n="4" />
+                        <head>LA ROBA</head>
+                        <!--PAGINA 3-->
+                        
+                        <p corresp="#z14">
+                            <lb n="1" />Il viandante che andava lungo il <placeName type="lake" corresp="#Biviere_Lentini">Biviere di Lentini</placeName>, 
+                            <lb n="2" />steso là come un pezzo di <term type="natural"> mare </term> morto, e le  <term type="natural" subtype="plant">stoppie</term> riarse
+                            <lb n="3" />della <placeName type="land" corresp="#Piana_Catania">Piana di Catania</placeName>, e gli <term type="natural" subtype="agriculture">aranci</term> sempre verdi di <placeName type="town" corresp="#Francofonte">Fran-
+                                <lb n="4" break="no" />cofonte</placeName>, e i <term type="natural" subtype="agriculture">sugheri</term> grigi di <placeName type="town" corresp="#Resecone">Resecone</placeName>, e i <term type="natural" subtype="land">pascoli</term> deserti di 
+                            <lb n="5" /><placeName type="town" corresp="#Passaneto">Passaneto</placeName> e di <placeName type="town" corresp="#Passinatello">Passinatello</placeName>, se domandava, per ingannare la
+                            <lb n="6" />noia della lunga strada polverosa, sotto il cielo fosco dal
+                            <lb n="7" />caldo, nell'ora in cui i campanelli dalla lettiga suonano
+                            <lb n="8" /><choice><orig>tristamente </orig><reg>tristemente</reg></choice> nell'immensa <term type="natural" subtype="land">campagna</term>, e i <term type="fauna">muli</term> lasciano cion-
+                            <lb n="9" break="no" />dolare il capo e la coda, e il <term type="occupation"> lettighiere </term> canta la sua canzone 
+                            <lb n="10" />malinconica per non lasciarsi vincere dal sonno della ma-
+                                <lb n="11" break="no" />laria:— <q type="spoken">Qui di chi è? </q>— sentiva rispondersi: — Di <persName role="landowner" type="fictional" corresp="#Mazzaro">Maz-
+                                <lb n="12" break="no" />zarò</persName>. — E passando vicino a una <term type="natural" subtype="farm">fattoria</term> grande quanto un
+                            <lb n="13" /> <placeName type="place"> paese</placeName>, <choice><orig>coi </orig><reg >con i</reg></choice> magazzini che sembrano chiese, e le <term type="fauna" subtype="bird">galline</term> a
+                            <lb n="14" />stormi accoccolate all'ombra del pozzo, e le donne che si
+                            <lb n="15" />mettevano la mano sugli occhi per vedere chi passava: —
+                            <lb n="16" /><q type="spoken">E qui? </q>— Di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>. — E cammina e cammina, mentre
+                            <lb n="17" />la malaria vi pesava sugli occhi, e vi scuoteva all'improv-
+                            <lb n="18" break="no" />viso l'abbaiare di un <term type="fauna" subtype="mammal">cane</term>, passando per una <term type="natural" subtype="agriculture">vigna</term> che 
+                            <lb n="19" />non finiva più, e si allargava sul <term type="natural"  subtype="mountain">colle</term> e sul <term type="natural"  subtype="land">piano</term> immo-
+                            <lb n="20" break="no" />bile, come gli pesasse addosso la polvere, e il <rs type="occupation">guardiano</rs> 
+                            <lb n="21" />sdraiato <choice><orig>bocconi</orig><reg>a pancia in giù</reg></choice> sullo <choice><orig>schioppo</orig><reg>fucile</reg></choice>, accanto al <term type="natural"  subtype="land">vallone</term>, alzava
+                            <lb n="22" />il capo sonnacchioso, e apriva un occhio per vedere chi
+                            <lb n="23" />fosse: — <q>Di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>. </q>— Poi veniva un <term type="natural" subtype="agriculture">uliveto</term> folto come un
+                            <lb n="24" /><term type="natural"  subtype="forest">bosco</term>, dove l'<term type="natural"  subtype="plant">erba</term> non spuntava mai, e la <term type="activity" subtype="agriculture">raccolta</term> durava
+                            <lb n="25" />fino a <rs type="time" subtype="month">marzo</rs>. Erano gli <term type="natural" subtype="agriculture">ulivi</term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>. E verso sera, <choice><orig>al-
+                                    <lb n="26" break="no" />lorché</orig><reg>quando</reg></choice> il sole tramontava rosso come il fuoco, e la <term type="natural" subtype="land">campa-
+                                <lb n="27" break="no" />gna</term> si velava di tristezza, si incontravano le lunghe file 
+                            <lb n="28" />degli <term type="tool" subtype="agriculture">aratri</term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> che tornavano adagio adagio dal
+                            <lb n="29" /><term type="natural" subtype="land">maggese</term>, e i <term type="fauna" subtype="mammal">buoi</term> che passavano il <term type="natural" subtype="river">guado</term> lentamente, col
+                            <lb n="30" />muso nell'acqua scura; e si vedevano nei <term type="natural" subtype="land">pascoli</term> lontani
+                            <lb n="31" />della <choice><sic><placeName type="town" corresp="#Cunziria">Canziria</placeName></sic><corr><placeName type="town" corresp="#Cunziria">Cunziria</placeName></corr></choice>, sulla <term type="natural" subtype="mountain">pendice</term> <term type="natural"  subtype="land">brulla</term>, le immense macchie
+                            <lb n="32" />biancastre delle <choice><orig><term type="fauna"> mandre </term> </orig><reg><term type="fauna"> mandrie </term> </reg></choice> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>; e si udiva il fischio
+                            <lb n="33" />del <term type="occupation">pastore</term> echeggiare nelle <term type="natural"  subtype="land">gole</term>, e il campanaccio che ri-
+                            <lb n="34" break="no" />suonava ora sì ed ora no, e il canto solitario perduto nella 
+                            <lb n="35" /><term type="natural" subtype="land">valle</term>. — Tutta <term type="abstract" subtype="wealth"> roba </term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>. Pareva che fosse di <persName role="landowner" type="fictional" corresp="#Mazzaro">Maz-
+                                <lb n="36" break="no" />zarò</persName> perfino il sole che tramontava, e i <term type="fauna" subtype="insect">grilli</term> che strilla-
+                            <lb n="37" break="no" />vano, e gli <term type="fauna" subtype="bird">uccelli</term> che andavano a rannicchiarsi col volo 
+                            <lb n="38" />breve dietro le <term type="natural" subtype="field">zolle</term>, e il sibilo dell'<term type="fauna" subtype="bird">assiolo</term> nel <term type="natural" subtype="forest">bosco</term>. Pareva
+                            <lb n="39" />che <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> fosse disteso tutto grande per quanto era
+                            <lb n="40" />grande la <term type="natural" subtype="land">terra</term>, e che gli si camminasse sulla pancia. —
+                            <lb n="41" />Invece egli era un omiciattolo, diceva il <term type="occupation">lettighiere</term>, che non
+                            <lb n="42" />gli avreste dato <measure type="currency" unit="BAIOCCO" quantity="1">un baiocco</measure>, a vederlo; e di grasso non aveva
+                            <lb n="43" />altro che la pancia, e non si sapeva come facesse a riem-
+                            <lb n="44" break="no" />pirsi, perché non mangiava altro che <measure type="currency" quantity="2">due soldi</measure> di <rs type="food_drink" subtype="food">pane</rs>, e 
+                            <lb n="45" />sì ch'era <term type="abstract" subtype="wealth"> ricco </term> come un <term type="fauna" subtype="mammal">maiale</term>; ma aveva la testa ch'era
+                            <lb n="46" />un brillante, quell'uomo.
+                        </p>
+                        <p corresp="#z15">
+                            
+                            <lb n="47" />Infatti, <choice><orig>colla</orig><reg>con la</reg></choice> testa come un brillante, aveva <term type="activity" subtype="wealth">accumulato</term> 
+                            <lb n="48" />tutta quella <term type="abstract" subtype="wealth">roba</term>, dove prima veniva da <measure type="time" subtype="full_day">mattina a sera</measure> a
+                            <lb n="49"/> <term type="activity" subtype="agriculture">zappare</term>, a <term type="activity" subtype="agriculture">potare</term>, a <term type="activity" subtype="agriculture">mietere</term>; col sole, <choice><orig>coll'</orig><reg>con l'</reg></choice>acqua, col vento,
+                            <lb n="50" />senza scarpe ai piedi, e senza uno straccio di cappotto; che
+                            <lb n="51" />tutti si <choice><orig>rammentavano</orig><reg>ricordavano</reg></choice> di avergli dato dei calci nel di die- 
+                            
+                            <cb n="5"/>
+                            
+                            <lb n="52" break="no" />tro, quelli che ora gli davano <choice><orig>da </orig><reg>dell' </reg></choice> eccellenza, e gli parlavano 
+                            <lb n="53" />col berretto in mano. <choice><sic>Nè</sic><corr>Né</corr></choice> per questo egli era montato in
+                            <lb n="54" />superbia, adesso che tutte le eccellenze del <placeName type="town">paese</placeName> erano suoi
+                            <lb n="55" />debitori; e diceva che <q type="spoken"> eccellenze vuol dire povero diavolo
+                            <lb n="56" />e cattivo pagatore </q>; ma egli portava ancora il berretto, sol-
+                            <lb n="57" break="no" />tanto lo portava di seta nera, era la sua sola grandezza, 
+                            <lb n="58" />e da ultimo era anche arrivato a mettere il cappello di fel-,
+                            <lb n="59" break="no" />tro perchè <term type="abstract" subtype="wealth"> costava </term> meno del berretto di seta. Della <term type="abstract" subtype="wealth">roba</term> 
+                            <lb n="60" />ne <term type="abstract" subtype="wealth">possedeva</term> fin dove arrivava la vista, ed egli aveva la vista
+                            <lb n="61" />lunga, dappertutto, a destra e a sinistra, davanti e di die-
+                            <lb n="62" break="no" />tro, nel <term type="natural" subtype="mountain">monte</term> e nella <term type="natural" subtype="land">pianura</term>. Più di <num type="cardinal" value="5000">cinquemila</num> bocche
+                            <lb n="63" />senza contare gli <term type="fauna" subtype="bird">uccelli</term> del cielo e gli <term type="fauna"> animali</term> della <term type="natural" subtype="land">terra</term>,
+                            <lb n="64" />mangiavano sulla sua <term type="natural" subtype="land">terra</term>, e senza contare la sua bocca la
+                            <lb n="65" />quale mangiava meno di tutte, e si contentava di <measure type="currency" quantity="2">due soldi</measure>
+                            <lb n="66" />di <rs type="food_drink" subtype="food"> pane </rs> e un pezzo di <rs type="food_drink" subtype="food"> formaggio </rs>, ingozzato in fretta e in
+                            <lb n="67" />furia <choice><orig>all'impiedi</orig><reg>in piedi</reg></choice>, in un cantuccio del magazzino grande come
+                            <lb n="68" />una chiesa, in mezzo alla polvere del <term type="natural" subtype="agriculture">grano</term>, che non ci si vede-
+                            <lb n="69" break="no" />va, mentre i <term type="occupation" subtype="agriculture">contadini</term> scaricavano i sacchi, o a ridosso di un 
+                            <lb n="70" /><term type="natural" subtype="agriculture">pagliaio</term>, quando il vento spazzava la <term type="natural" subtype="land">campagna</term> gelata, al tem-
+                            <lb n="71" break="no" />po del <term type="activity" subtype="agriculture">seminare</term>, o <choice><orig>colla</orig><reg>con la</reg></choice> testa dentro un <choice><orig>corbello</orig><reg>cesto</reg></choice>, nelle calde 
+                            <lb n="72" />giornate della <choice><orig><term type="activity" subtype="agriculture">mèsse</term> </orig><reg><term type="activity" subtype="agriculture">messe</term> </reg></choice>. Egli non beveva <rs type="food_drink" subtype="drink"> vino </rs>, non fumava, non
+                            <lb n="73" />usava tabacco, e sì che del tabacco ne producevano i suoi
+                            <lb n="74" /><term type="natural" subtype="agriculture">orti</term> lungo il <term type="natural" subtype="river">fiume</term>,<choice><orig>colle</orig><reg>con le</reg></choice> <term type="natural" subtype="plant">foglie</term> larghe ed alte come un fan-,
+                            <lb n="75" break="no" />ciullo, di quelle che si <term type="activity" subtype="wealth"> vendevano </term> a <measure type="currency" unit="LIRE" quantity="95">95 lire</measure>. Non aveva il vi-
+                            <lb n="76" />zio del <choice><orig>giuoco</orig><reg>gioco</reg></choice>, <choice><sic>nè</sic><corr>né</corr></choice> quello delle donne. Di donne non aveva 
+                            <lb n="77" />mai avuto sulle spalle che sua madre, la quale gli era co-
+                            <lb n="78" break="no" />stata anche <measure type="currency" unit="TARI" quantity="12">12 tari</measure>, quando aveva dovuto farla portare al 
+                            <lb n="79" />camposanto.
+                        </p>
+                        <p corresp="#z16">
+                            <lb n="80" />Era che ci aveva pensato e ripensato tanto a quel che
+                            <lb n="81" />vuol dire la <term type="abstract" subtype="wealth">roba</term>, quando andava senza scarpe a <term type="activity" subtype="agriculture">lavorare</term>
+                            <lb n="82" />nella <term type="natural" subtype="land">terra</term> che ora era sua, ed aveva provato quel che ci
+                            <lb n="83" />vuole a fare i <measure type="currency" unit="TARI" quantity="3">tre tari</measure> della <rs type="time" subtype="day">giornata</rs>, nel <rs type="time" subtype="month">mese di luglio</rs>, a
+                            <lb n="84" /><choice><orig>star colla</orig><reg>stare con la</reg></choice> schiena curva <measure type="time" quantity="14">14 ore</measure>, col <term type="occupation">soprastante</term> a <term type="fauna" subtype="mammal">ca-
+                                <lb n="85" break="no" />vallo</term> dietro, che vi piglia a nerbate se fate di rizzarvi un
+                            <lb n="86" />momento. Per questo non aveva lasciato passare un <rs type="time" subtype="day">minuto</rs>
+                            <lb n="87" />della sua vita che non fosse stato impiegato a fare della <term type="abstract" subtype="wealth">roba</term>;
+                            <lb n="88" />e adesso i suoi <term type="tool" subtype="agriculture">aratri</term> erano numerosi come le lunghe file dei
+                            <lb n="89" /><term type="fauna" subtype="bird">corvi</term> che arrivano in <rs type="time" subtype="month">novembre</rs>; e altre file di <term type="fauna" subtype="mammal">muli</term>, che
+                            <lb n="90" />non finivano più, portavano le <term type="natural" subtype="field">sementi</term>; le donne che sta-
+                            <lb n="91" />vano accoccolate nel fango, da <measure type="time" subtype="month" quantity="6">ottobre a  marzo </measure>, per <term type="activity" subtype="agriculture">rac-
+                                <lb n="92" break="no" />cogliere</term> le sue <term type="natural" subtype="agriculture">olive</term>, non si potevano contare, come non 
+                            <lb n="93" />si possono contare le <term type="fauna" subtype="bird">gazze</term> che vengono a rubarle; e al
+                            <lb n="94" />tempo della <term type="activity" subtype="agriculture">vendemmia</term> accorrevano dei <placeName>villaggi</placeName> interi
+                            <lb n="95" />alle sue <term type="natural" subtype="agriculture">vigne</term>, e fin dove sentivasi cantare, nella <term type="natural" subtype="land">campagna</term>,
+                            <lb n="96" />era per la <term type="activity" subtype="agriculture">vendemmia</term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>; alla <choice><orig><term type="activity" subtype="agriculture">mèsse</term> </orig><reg><term type="activity" subtype="agriculture">messe</term> </reg></choice> poi i <term type="occupation" subtype="agriculture">mieti-
+                                <lb n="97" break="no" />tori</term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> sembravano un esercito di <term type="occupation">soldati</term>, che per  
+                            <lb n="98" /><term type="abstract" subtype="wealth"> mantenere </term> tutta quella gente, col <rs type="food_drink" subtype="food"> biscotto </rs> alla <rs type="time" subtype="day">mattina</rs> e il
+                            <lb n="99" /><rs type="food_drink" subtype="food"> pane </rs> e l'<rs type="food_drink" subtype="food">arancia amara</rs> a <rs type="time" subtype="day">colazione</rs>, e la <rs type="time" subtype="day">merenda</rs>, e le <rs type="food_drink" subtype="food">la-
+                                <lb n="100" break="no" />sagne </rs> alla <rs type="time" subtype="day">sera</rs>, ci volevano dei <term type="abstract" subtype="wealth"> denari </term> a manate, e le <rs type="food_drink" subtype="food"> lasa-
+                                <lb n="101" break="no" />gne </rs> si scodellavano nelle madie larghe come tinozze. Per-
+                            <lb n="102" break="no" />ciò adesso, quando andava a <term type="fauna" subtype="mammal">cavallo</term> dietro la fila dei suoi 
+                            <lb n="103" /><term type="occupation" subtype="agriculture">mietitori</term>, col <term type="tool" subtype="agriculture">nerbo</term> in mano, non ne perdeva d'occhio uno
+                            <lb n="104" />solo, e badava a ripetere: —  <q type="spoken"> Curviamoci, ragazzi! </q> — Egli era
+                            <lb n="105" />tutto l'<measure type="time" subtype="year" quantity="1">anno</measure> <choice><orig>colle</orig><reg>con le</reg></choice> mani in tasca a <term type="activity" subtype="wealth"> spendere </term>, e per la sola
+                            <lb n="106" />fondiaria il <term type="occupation">re</term> si <term type="activity" subtype="wealth"> pigliava </term> tanto che a <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> gli veniva
+                            <lb n="107" />la febbre, ogni volta.
+                        </p>
+                        
+                        <p corresp="#z17">
+                            <lb n="108" />Però ciascun <rs type="time" subtype="year">anno</rs> tutti quei  magazzini grandi come
+                            <lb n="109" /> chiese si riempivano di <term type="natural" subtype="agriculture">grano</term> che bisognava scoperchiare
+                            <lb n="110" />il tetto per farcelo <choice><orig>capire </orig><reg>stare </reg></choice> tutto; e ogni volta che <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>
+                            <lb n="111" /><term type="activity" subtype="wealth">vendeva</term> il <rs type="food_drink" subtype="drink"> vino </rs> ci voleva più di un <rs type="time" subtype="day">giorno</rs> per contare il
+                            <lb n="112" /><term type="abstract" subtype="wealth">denaro</term>, tutto di <measure type="currency" unit="TARI" quantity="12">12 tari</measure> d'argento, chè lui non ne voleva
+                            <lb n="113" />di carta sudicia per la sua <term type="abstract" subtype="wealth">roba</term>, e andava a <term type="activity" subtype="wealth">comprare</term> 
+                            <lb n="114" />la carta sudicia soltanto quando aveva da <term type="activity" subtype="wealth">pagare</term> il <rs type="occupation">re</rs>, o
+                            <lb n="115" />gli altri; e alle fiere gli <term type="fauna" subtype="mammal">armenti</term> di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> coprivano tutto
+                            <lb n="116" />il <term type="natural" subtype="land">campo</term>, e ingombravano le strade che ci voleva <measure type="time" subtype="half_day">mezza
+                                <lb n="117" break="no" />giornata</measure> per lasciarli sfilare, e il santo, con la banda, alle
+                            <lb n="118" />volte dovevano <choice><orig>mutar </orig><reg>cambiare </reg></choice> strada, e cedere il passo.
+                        </p>
+                        
+                        <pb n="4"/>
+                        <cb n="6" />
+                        
+                        <p corresp="#z18">
+                            <lb n="119" />Tutta quella <term type="abstract" subtype="wealth">roba</term> se l'era fatta lui, <choice><orig>colle</orig><reg>con le</reg></choice> sue mani e 
+                            <lb n="120" /><choice><orig>colla</orig><reg>con la</reg></choice> sua testa, col non dormire la notte, col prendere la
+                            <lb n="121" />febbre dal batticuore o dalla malaria, <choice><orig>coll'</orig><reg>con l'</reg></choice>affaticarsi <measure type="time" subtype="full_day">dal-
+                                <lb n="122" break="no" />l'alba alla notte </measure>, e andare attorno, sotto il sole e sotto la 
+                            <lb n="123" />pioggia, col logorare i suoi stivali e le sue <term type="fauna" subtype="mammal">mule</term> — egli
+                            <lb n="124" />solo non si logorava, pensando alla sua <term type="abstract" subtype="wealth">roba</term>, ch'era tutto
+                            <lb n="125" />quello <choice><orig>ch'ei avesse</orig><reg>che lui aveva</reg></choice> al mondo, perchè non aveva <choice><sic>nè</sic><corr>né</corr></choice> figli, <choice><sic>nè</sic><corr>né</corr></choice>
+                            <lb n="126" />nipoti, <choice><sic>nè</sic><corr>né</corr></choice> parenti; non aveva altro che la sua <term type="abstract" subtype="wealth">roba</term>. Quando
+                            <lb n="127" />uno è fatto così, vuol dire che è fatto per la <term type="abstract" subtype="wealth">roba</term>.
+                        </p>
+                        
+                        <p corresp="#z19">
+                            <lb n="128" />Ed anche la <term type="abstract" subtype="wealth">roba</term> era fatta per lui, che pareva <choice><orig>ci avesse</orig><reg>avesse</reg></choice>
+                            <lb n="129" />la calamita, perchè la <term type="abstract" subtype="wealth">roba</term> vuol stare con chi sa tenerla,
+                            <lb n="130" />e non la sciupa come quel <rs type="occupation">barone</rs> che prima era stato il pa-
+                            <lb n="131" break="no" />drone di <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>, e l'aveva raccolto per carità nudo e crudo 
+                            <lb n="132" />nei suoi <term type="natural" subtype="field">campi</term>, ed era stato il padrone di tutti quei <term type="natural" subtype="field">campi</term>,
+                            <lb n="133" />e di tutti quei <term type="natural" subtype="forest">boschi</term>, e di tutte quelle <term type="natural" subtype="agriculture">vigne</term> e tutti que-
+                            <lb n="134" break="no" />gli <term type="fauna" subtype="mammal">armenti</term>, che quando veniva nelle sue <term type="natural" subtype="land">terre</term> a <term type="fauna" subtype="mammal">cavallo</term> 
+                            <lb n="135" /><choice><orig>coi</orig><reg>con i</reg></choice> <term type="occupation" subtype="agriculture">campieri</term> dietro, pareva il <rs type="occupation">re</rs>, e gli preparavano anche
+                            <lb n="136" />l'alloggio e il pranzo,<choice><orig>al minchione </orig><reg>allo sciocco</reg></choice>, sicché ognuno sapeva
+                            <lb n="137" />l'ora e il momento in cui doveva arrivare, e non si faceva
+                            <lb n="138" />sorprendere <choice><orig>colle</orig><reg>con le</reg></choice> mani nel sacco. — <q type="spoken"> Costui vuol essere <choice><orig>ru- 
+                            <lb n="139" break="no" />bato</orig><reg>derubato</reg></choice> per forza! </q> — diceva <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>, e <choice><orig>schiattava dalle risa</orig><reg>crepava dal ridere</reg></choice>  
+                            <lb n="140" />quando il <rs type="occupation">barone</rs> gli dava dei calci nel di dietro, e si fre-
+                            <lb n="141" break="no" />gava la schiena <choice><orig>colle</orig><reg>con le</reg></choice> mani, borbottando: <q type="spoken">«Chi è <choice><orig>min- 
+                            <lb n="142" break="no" />chione </orig><reg>sciocco</reg></choice> se ne stia a casa,»</q> — <q type="spoken" >«la <term type="abstract" subtype="wealth">roba</term> non è di chi l'ha, ma 
+                            <lb n="143" />di chi la sa fare.»</q>
+                            <lb n="144" />Invece egli, dopo che ebbe fatta la sua <term type="abstract" subtype="wealth">roba</term>,
+                            <lb n="145" />non mandava certo a dire se veniva a sorvegliare la
+                            <lb n="146" /><choice><orig><term type="activity" subtype="agriculture">mèsse</term> </orig><reg><term type="activity" subtype="agriculture">messe</term> </reg></choice>, o la <term type="activity" subtype="agriculture">vendemmia</term>, e quando, e come; ma capitava
+                            <lb n="147" />all'improvviso, a piedi o a <term type="fauna" subtype="mammal">cavallo</term> alla <term type="fauna" subtype="mammal">mula</term>, senza <rs type="occupation" subtype="agriculture">campieri</rs>,
+                            <lb n="148" />con un pezzo di <rs type="food_drink" subtype="food"> pane </rs> in tasca; e dormiva accanto ai suoi
+                            <lb n="149" /><term type="natural" subtype="agriculture">covoni</term>, <choice><orig>cogli</orig><reg>con gli</reg></choice> occhi aperti, e lo <choice><orig>schioppo</orig><reg>fucile</reg></choice> fra le gambe.
+                        </p>
+                        
+                        <p corresp="#z20">
+                            <lb n="150" />In tal modo a poco a poco <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> divenne il pa-
+                            <lb n="151" break="no" />drone di tutta la <term type="abstract" subtype="wealth">roba</term> del <rs type="occupation">barone</rs>; e costui uscì prima 
+                            <lb n="152" />dall'<term type="natural" subtype="agriculture">uliveto</term>, e poi dalle <term type="natural" subtype="agriculture">vigne</term>, e poi dai <term type="natural" subtype="land">pascoli</term>, e poi dalle
+                            <lb n="153" /><term type="natural" subtype="farm">fattorie</term>, e infine dal suo palazzo <choice><orig>istesso</orig><reg>stesso</reg></choice>, che non passava
+                            <lb n="154" />giorno che non firmasse delle carte bollate, e <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> ci
+                            <lb n="155" />metteva sotto la sua brava croce. Al <rs type="occupation">barone</rs> non rimase altro
+                            <lb n="156" />che lo scudo di pietra ch'era prima sul portone   , ed era
+                            <lb n="157" />la sola cosa che non avesse voluto <term type="activity" subtype="wealth">vendere</term>, dicendo a <persName role="landowner" type="fictional" corresp="#Mazzaro">Maz-
+                                <lb n="158" break="no" />zarò</persName>:<q> — Questo solo, di tutta la mia <term type="abstract" subtype="wealth">roba</term>, non fa per te, —</q> 
+                            <lb n="159" />ed era vero; <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> non sapeva che farsene, e non l'avrebbe
+                            <lb n="160" /><term type="activity" subtype="wealth">pagato</term> <measure type="currency" unit="BAIOCCO" quantity="2">due baiocchi</measure>. Il <rs type="occupation">barone</rs> gli dava ancora del tu, ma
+                            <lb n="161" />non gli dava più i calci nel di dietro.
+                        </p>
+                        
+                        <p corresp="#z21">
+                            <lb n="162" /><q>— Questa è una bella cosa, d'avere la fortuna che ha
+                                <lb n="163" /><persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>! —</q> diceva la gente; e non sapeva quel che ci era
+                            <lb n="164" />voluto ad acchiappare quella fortuna; quanti pensieri, quante
+                            <lb n="165" />fatiche, quante menzogne, quanti pericoli di andare in ga-
+                            <lb n="166" break="no" />lera, e come quella testa che era un brillante avesse lavo-
+                            <lb n="167" break="no" />rato giorno e notte, meglio di una macina del <term type="tool" subtype="agriculture">mulino</term>, per fare
+                            <lb n="168" />la <term type="abstract" subtype="wealth">roba</term>; e se il proprietario di una <term type="natural" subtype="land">chiusa</term> limitrofa si ostinava
+                            <lb n="169" />a non cedergliela, e voleva prendere <choice><orig>pel</orig><reg>per il</reg></choice> collo <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>, dover
+                            <lb n="170" />trovare lo stratagemma per costringerlo a <term type="activity" subtype="wealth">vendere</term>, e far-
+                            <lb n="171" break="no" />celo cascare, malgrado la diffidenza contadinesca. <choice><orig>Ei gli   
+                                    <lb n="172" break ="no" />andava a vantare</orig><reg>Egli ostentava al contadino</reg></choice>, per esempio, la fertilità di una <term type="natural" subtype="land">tenuta</term> la
+                            <lb n="173" />quale non produceva nemmeno <term type="food_drink" subtype="food">lupini</term>, e arrivava a fargliela
+                            <lb n="174" />credere una <term type="natural" subtype="land">terra</term> promessa, sinché il povero diavolo si la-
+                            <lb n="175" break="no" />sciava indurre a prenderla in affitto, per specularci sopra, 
+                            <lb n="176" />e ci perdeva poi il fitto, la casa e la <term type="natural" subtype="land">chiusa</term>, che <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName>
+                            <lb n="177" />se <choice><orig>l'acchiappava </orig><reg>la prendeva </reg></choice> <q> — per un pezzo di <rs type="food_drink" subtype="food"> pane </rs>. — </q> E quante 
+                            <lb n="178" />seccature <persName role="landowner" type="fictional" corresp="#Mazzaro">Mazzarò</persName> doveva sopportare! I <term type="occupation" subtype="agriculture">mezzadri</term> che ve-
+                            <lb n="179" break="no" />nivano a lagnarsi delle malannate, i debitori che mandavano
+                            <lb n="180" />in processione le loro donne a strapparsi i capelli e pic-
+                            <lb n="181" break="no" />chiarsi il petto per scongiurarlo di non metterli in mezzo
+                            <lb n="182" />alla strada, col <choice><orig>pigliarsi </orig><reg>prendersi </reg></choice> il <term type="fauna" subtype="mammal">mulo</term> o l'<term type="fauna" subtype="mammal">asinello</term>, che non ave-
+                            <lb n="183" break="no" />vano da mangiare.
+                        </p>
+                        
+                        <p corresp="#z22">
+                            <lb n="184" /><q>— Lo vedete quel che mangio io?</q> — rispondeva lui,
+                            <lb n="185" /><q><rs type="food_drink" subtype="food">pane</rs> e <rs type="food_drink" subtype="food">cipolla</rs>; e sì che ho i magazzini pieni zeppi, e sono
+                                <lb n="186" />il padrone di tutta questa <term type="abstract" subtype="wealth">roba</term>. —</q> E se gli domandavano
+                            
+                            <cb n="7"/>
+                            
+                            <lb n="187" />un pugno di <rs type="food_drink" subtype="food">fave</rs>, di tutta quella <term type="abstract" subtype="wealth">roba</term>, <choice><orig>ei </orig><reg>egli</reg></choice> diceva: <q> — Che
+                                <lb n="188" />vi pare che l'abbia <term type="activity" subtype="wealth">rubata</term>? Non sapete quanto costano per
+                                <lb n="189" /><term type="activity" subtype="agriculture">seminarle</term>, e <term type="activity" subtype="agriculture">zapparle</term>, e <term type="activity" subtype="agriculture">raccoglierle</term>? —</q> E se gli domanda-
+                            <lb n="190" break="no" />vano un <measure type="currency" unit="SOLDI" quantity="1">soldo</measure> rispondeva che non l'aveva.
+                        </p>
+                        
+                        <p corresp="#z23">
+                            <lb n="191" />E non l'aveva davvero. <choice><orig>Ché </orig><reg>Perché </reg></choice> in tasca non teneva mai
+                            <lb n="192" /><measure type="currency" unit="TARI" quantity="12">12 tari</measure>, tanti ce ne volevano per far fruttare tutta quella
+                            <lb n="193" /><term type="abstract" subtype="wealth">roba</term>, e il <term type="abstract" subtype="wealth">denaro</term> entrava ed usciva come un fiume dalla
+                            <lb n="194" />sua casa. Del resto a lui non gliene importava del <term type="abstract" subtype="wealth">denaro</term>;
+                            <lb n="195" />diceva <q type="spoken"> che non era <term type="abstract" subtype="wealth">roba</term>, e appena metteva insieme una
+                            <lb n="196" />certa <term type="abstract" subtype="wealth">somma</term>, <term type="activity" subtype="wealth">comprava</term> subito un pezzo di <term type="natural" subtype="land">terra</term> </q>; perché
+                            <lb n="197" />voleva arrivare ad avere della <term type="natural" subtype="land">terra</term> quanta ne ha il <rs type="occupation">re</rs>, ed
+                            <lb n="198" />esser meglio del <rs type="occupation">re</rs>, <choice><orig>ché </orig><reg>perché </reg></choice> il <term type="occupation">re</term> non può né <term type="activity" subtype="wealth">venderla</term>, né dire
+                            <lb n="199" />ch'è sua.
+                        </p>
+                        
+                        <p corresp="#z24">
+                            <lb n="200" />Di una cosa sola gli doleva, che cominciasse a farsi
+                            <lb n="201" />vecchio, e la <term type="natural" subtype="land">terra</term> doveva lasciarla là dov'era. Questa è una
+                            <lb n="202" />ingiustizia di Dio, che dopo di essersi logorata la vita ad
+                            <lb n="203" /><term type="activity" subtype="wealth">acquistare</term> della <term type="abstract" subtype="wealth">roba</term>, quando arrivate ad averla, che ne
+                            <lb n="204" />vorreste ancora, dovete lasciarla! E stava delle ore seduto
+                            <lb n="205" />sul corbello, col mento nelle mani, a guardare le sue <term type="natural" subtype="agriculture">vigne</term>
+                            <lb n="206" />che gli verdeggiavano sotto gli occhi, e i <term type="natural" subtype="field">campi</term> che ondeg-
+                            <lb n="207" break="no" />giavano di <term type="natural" subtype="agriculture">spighe</term> come un mare, e gli <term type="natural" subtype="agriculture">oliveti</term> che velavano 
+                            <lb n="208" />la <term type="natural" subtype="mountain">montagna</term> come una nebbia, o se un ragazzo <term type="activity" subtype="agriculture">seminando</term>
+                            <lb n="209" />gli passava dinanzi, curvo sotto il peso come un <term type="fauna" subtype="mammal">asino</term> stanco,
+                            <lb n="210" />gli lanciava il suo bastone fra le gambe, per invidia, e bor-
+                            <lb n="211" break="no" />bottava: <q> — Guardate chi ha i giorni lunghi! quelli che non 
+                                <lb n="212" />hanno niente!</q>
+                        </p>
+                        
+                        <p corresp="#z25">
+                            <lb n="213" />Sicché quando gli dissero che era tempo di lasciare la
+                            <lb n="214" />sua <term type="abstract" subtype="wealth">roba</term>, per pensare all'anima, uscì nel cortile come un
+                            <lb n="215" />pazzo, barcollando, e andava ammazzando a colpi di ba-
+                            <lb n="216" break="no" />stone le sue <choice><orig><term type="fauna" subtype="bird">anitre</term></orig><reg><term type="fauna" subtype="bird">anatre</term></reg></choice> e i suoi <term type="fauna" subtype="bird">tacchini</term>, e gridava, come un 
+                            <lb n="217" /><term type="fauna" subtype="mammal">vitello</term> che va cercando la madre: <q>— <term type="abstract" subtype="wealth">Roba</term> mia, vientene
+                                <lb n="218" />con me!</q>
+                        </p>
+                            <signed>
+                                <persName role="author" corresp="#Giovanni_Verga">G. Verga</persName>
+                            </signed>
+
+                    </div>
+                    
+                    <!-- BIBLIOGRAFIA -->
+
+                    
+                    <div type="bibliography" xml:id="bib">
+                        
+                        <pb n="5"/>
+                        
+                        <cb n="8" />
+
+                        <head>BIBLIOGRAFIA</head>
+                        
+                        <div type="biblItem" xml:id="bib_1">
+                            <head type="bibliography-title"> <persName role="author" corresp="#Ettore_Novelli">ETTORE NOVELLI</persName>, <title level="m" xml:lang="grc">Ero e Leandro</title> <note type="translation" xml:lang="grc">(dal greco)</note> - <placeName corresp="#Imola">Imola</placeName>, <persName corresp="#Tip_Galeati">Tip. Galeati</persName>, <date when="1880">1880</date>.</head>
+                            <p corresp="#z26" part="Y">
+                                <lb n="1"/>È pur confortante il vedere che in quel movimento assai
+                                <lb n="2"/>scomposto con cui il pensiero italiano manifesta la sua
+                                <lb n="3"/>tendenza a rinnovarsi, fra il cozzare di <choice><orig>formole </orig><reg>formule</reg></choice> opposte,
+                                <lb n="4"/>di novità variopinte e strane, d'influenze indigene ed eso-
+                                <lb n="5" break="no"/>tiche, la vecchia stella polare del nostro intelletto e del-
+                                <lb n="6"/>l'arte veramente nostra, <term type="literary" subtype="tradition">l'antichità classica</term>, non si perde mai
+                                <lb n="7"/>di vista. Mentre da un lato la <term type="institution" subtype="education">scuola</term> risuscita quegli studi
+                                <lb n="8"/>e con metodi nuovi e razionali li rende vitali e fecondi, la
+                                <lb n="9"/><term type="literary" subtype="genre">poesia</term> poi d'ogni specie, anche barbara, ci accosta a quella
+                                <lb n="10"/>parola antica, se ne infiora e mostra di sentirne comunque
+                                <lb n="11"/>il fascino sempre vivente, e le <term type="activity" subtype="translation">traduzioni</term> di <term type="literary" subtype="genre">poesie</term> e <term type="literary" subtype="genre">prose</term>
+                                <lb n="12"/>greche vanno moltiplicando <choice><orig>tuttodì</orig><reg>di continuo</reg></choice> fra noi, per opera di
+                                <lb n="13"/>uomini di <term type="literary" subtype="school">scuola</term> diversa. Il <choice><abbr>sig.</abbr><expan>signor</expan></choice> <persName role="author" corresp="#Ettore_Novelli">Ettore Novelli</persName> che ora ci
+                                <lb n="14"/>dà una nuova <term type="activity" subtype="translation">traduzione</term> del grazioso <term type="literary" subtype="genre">poemetto</term> di <persName role="author" xml:lang="grc" corresp="#Museo">Museo</persName>
+                                <lb n="15"/>(nome che per una sua poco felice fantasia critica egli ha
+                                <lb n="16"/>voluto cancellare), appartiene ad una <term type="literary" subtype="school">scuola</term> che può ormai
+                                <lb n="17"/>dirsi tramontata e che pure un tempo (non è lontano) fu
+                                <lb n="18"/>il miglior segno di vita <term type="discipline" subtype="literary"> letteraria </term> che si facesse notare
+                                <lb n="19"/>nel morto <choice><orig>aere </orig><reg>ambiente</reg></choice> di <placeName type="city" corresp="#Roma">Roma</placeName> papale. E ben rammenta il <persName role="author" corresp="#Ettore_Novelli">Novelli</persName>
+                                <lb n="20"/>i compagni perduti e con pio pensiero ne ravviva, con
+                                <lb n="21"/>questo scritto ad essi dedicato, la memoria. Molto essi non
+                                <lb n="22"/>fecero, <choice><sic>nè</sic><corr>né</corr></choice> lasciarono orme profonde, <choice><sic>nè</sic><corr>né</corr></choice> il nome loro suonò
+                                <lb n="23"/>alto e lontano, ma gravi ed affannose furono per loro le dif-
+                                <lb n="24" break="no"/>ficoltà del tempo e del luogo, e se in condizioni tali seppero
+                                <lb n="25"/>tener viva come in un focolare privato e domestico una
+                                
+                                <pb n="6"/>
+                                <cb n="9" />
+                                
+                                <lb n="26"/>scintilla di <term type="literary" subtype="genre">poesia</term>, ben merita l'onesto drappello, oggi assot-
+                                <lb n="27" break="no"/>tigliato e disperso, l'elogio e il rimpianto dei superstiti.
+                                <lb n="28"/>Era quella una <term type="literary" subtype="school">scuola</term> puramente <term type="literary"> letteraria </term>, non <term type="discipline">filologica</term>,
+                                <lb n="29"/><choice><sic>nè</sic><corr>né</corr></choice> storica, <choice><sic>nè</sic><corr>né</corr></choice> scientifica in alcuna maniera; e <term type="discipline" subtype="literary"> letterario </term>, <choice><orig>ad 
+                                <lb n="30" break="no" /> onta della</orig><reg>nonostante la</reg></choice> lunga, erudita introduzione, è questo lavoro del
+                                <lb n="31"/><persName role="author" corresp="#Ettore_Novelli">Novelli</persName>, il quale ha ottimamente reso in <term type="literary" subtype="form">versi italiani</term> di
+                                <lb n="32"/>nobile stampo, in lingua <choice><orig>eletta </orig><reg>scelta per natura </reg></choice> e con frase <term type="literary"> poetica </term> di ottimo
+                                <lb n="33"/>gusto, questo <term type="literary" subtype="genre">poemetto</term> che è certamente quanto di meglio ci
+                                <lb n="34"/>ha lasciato la <term type="literary" subtype="tradition">poesia greca della decadenza</term>. È una <term type="literary" subtype="genre">poesia</term>
+                                <lb n="35"/>narrativa descrittiva e sentimentale che sorprende il cono-
+                                <lb n="36" break="no"/>scitore del tempo a cui appartiene, per una sua semplice
+                                <lb n="37"/>sobrietà tanto lontana dalle <term type="literary" subtype="style">pompe retoriche</term> dei contem-
+                                <lb n="38" break="no"/>poranei. Il <persName role="author" corresp="#Ettore_Novelli">Novelli</persName> ha <term type="activity" subtype="translation">tradotto</term> con certa libertà, ha fatto
+                                <lb n="39"/>sparire certe lacune, ed ha reso chiaro, piano e anche <term type="literary"> poe-
+                                <lb n="40" break="no"/>tico</term> quanto talvolta lo è meno nell'originale; <choice><orig>talchè</orig><reg>quindi </reg></choice> può
+                                <lb n="41"/>anche dirsi che in certo grado la sua <term type="activity" subtype="translation">traduzione</term> è migliore
+                                <lb n="42"/>dell'originale, <choice><sic>nè</sic><corr>né</corr></choice> può farsegliene un addebito, essendo
+                                <lb n="43"/>l'opera sua artistica, non <term type="discipline">filologica</term>. <choice><sic>Nè</sic><corr>Né</corr></choice> del resto potrebbe
+                                <lb n="44"/>altrimenti farsi una buona <term type="activity" subtype="translation">traduzione</term> di testi tali; poichè
+                                <lb n="45"/>la <term type="activity" subtype="translation">traduzione</term> avrà sempre su di essi il vantaggio di essere
+                                <lb n="46"/>scritta in una lingua viva, mentre essi lo sono in una lingua
+                                <lb n="47"/>morta, e s'intende che dico morta già quando si scrivevano.
+                                <lb n="48"/>Il linguaggio di questi ultimi <term type="literary" subtype="tradition">opici greci</term> ha per fondamento
+                                <lb n="49"/>l'antico linguaggio <term type="literary" subtype="tradition">opico</term> di <persName role="author" xml:lang="grc" corresp="#Omero">Omero</persName> e dei <term type="literary" subtype="tradition">ciclici</term>, elaborato poi
+                                <lb n="50"/>dagli <term type="literary" subtype="tradition">epici</term> dei tempi attici, poi dagli <term type="literary" subtype="school">alessandrini</term> poeti,
+                                <lb n="51"/><term type="discipline">grammatici</term> ed eruditi insieme, e per ultimo dagli <term type="literary" subtype="tradition">epici</term> della
+                                <lb n="52"/><term type="literary" subtype="school">scuola egizia</term> di cui suol considerarsi come capo <persName role="author" xml:lang="grc" corresp="#Nonno_Panopoli">Nonno di</persName>
+                                <lb n="53"/><persName role="author" xml:lang="grc" corresp="#Nonno_Panopoli">Panopoli</persName> che fiorì verso il <date period="late_antiquity">5° secolo dell'èra volgare</date>, ed a
+                                <lb n="54"/>cui appartiene <persName role="author" xml:lang="grc" corresp="#Museo">Museo</persName>. È dunque <term type="literary" subtype="genre">poesia di scuola</term>, e la
+                                <lb n="55"/>lingua è intieramente morta, anzi convenzionale in gran
+                                <lb n="56"/>parte, <choice><sic>nè</sic><corr>né</corr></choice> al tempo dell'autore c'era alcuno che fosse capace
+                                <lb n="57"/>d'intender bene quel <term type="literary" subtype="genre">poema</term> senza aver fatto gli studi
+                                <lb n="58"/>necessari. L'<term type="occupation">ellenista</term> adunque, che familiare colla lingua
+                                <lb n="59"/>greca in tutta la sua vastità e nelle sue fasi numerose, legge
+                                <lb n="60"/>questo <term type="literary" subtype="genre">poemetto</term> e per sua dottrina lo intende e ne sente i
+                                <lb n="61"/>pregi, quando passa alla <term type="activity" subtype="translation">traduzione</term> del <persName role="author" corresp="#Ettore_Novelli">Novelli</persName> gli pare
+                                <lb n="62"/>come di respirare all'aria libera e ritrova con piacere
+                                <lb n="63"/>in forme fresche e viventi quel bello ch'ei seguiva in mezzo
+                                <lb n="64"/>agli stenti di una lingua che sta alla lingua di <persName role="author" xml:lang="grc" corresp="#Omero">Omero</persName> come
+                                <lb n="65"/>starebbe a <persName role="ruler" xml:lang="egp" corresp="#Sesostri">Sesostri</persName> la mummia di <persName role="ruler" xml:lang="egp" corresp="#Sesostri">Sesostri</persName>.
+                            </p>
+                            <p corresp="#z27">
+                                <lb n="66"/>Chi non è <term type="occupation">filologo</term> tutto ciò non potrà vedere, ma leg-
+                                <lb n="67" break="no"/>gerà con diletto la <term type="activity" subtype="translation">traduzione</term> nella quale troverà reso op-
+                                <lb n="68" break="no"/>portunamente il sentimento e lo <term type="literary" subtype="style">stile poetico</term> dell'originale;
+                                <lb n="69"/>forse però sarà anche poco grato al <persName role="author" corresp="#Ettore_Novelli">Novelli</persName> di avergli vo-
+                                <lb n="70" break="no"/>luto far pagare assai caro questo piacere, dandogli da leg-
+                                <lb n="71" break="no"/>gere per una ventina di pagine di <term type="literary" subtype="genre">poesia</term>, una introduzione
+                                <lb n="72"/>di più di <num type="cardinal" value="90">90</num> pagine tutta irta di nomi di dotti d'ogni tempo
+                                <lb n="73"/>e d'ogni paese e con tutto un labirinto di questioni e di opi-
+                                <lb n="74" break="no"/>nioni erudite sull'autore del <term type="literary" subtype="genre">poema</term>, sul suo nome, la sua
+                                <lb n="75"/>età, ecc. Vero è che, quasi a compenso, il <persName role="author" corresp="#Ettore_Novelli">Novelli</persName> ha voluto
+                                <lb n="76"/>trattare tutta questa materia in modo ameno e spesso faceto
+                                <lb n="77"/>tenendo anche conto di vecchie stranezze dimenticate e non
+                                <lb n="78"/>più buone ad altro che a far ridere. Ma per deridere gli
+                                <lb n="79"/>errori altrui bisogna essere ben sicuro di non commetterne
+                                <lb n="80"/>dei propri. Lasciando da parte non pochi libri inutili da
+                                <lb n="81"/>lui inutilmente sfogliati e combattuti, un'occhiata ad un
+                                <lb n="82"/>buon libro, da lui dimenticato, di <persName role="scholar" corresp="#Rohde">Rohde</persName> sul <title level="m" corresp="#Romanzo_greco">Romanzo greco</title>
+                                <lb n="83"/>l'avrebbe aiutato a dar notizie ben più istruttive sul posto
+                                <lb n="84"/>che occupa questo <term type="literary" subtype="genre">poemetto</term> nella storia delle <term type="literary" subtype="genre">narrazioni</term>
+                                <lb n="85"/><term type="literary" subtype="genre">amatorie</term> dei Greci. Quanto poi egli dice sull'autorità della
+                                <lb n="86"/><term type="philological">tradizione manoscritta</term> in certe questioni, sul valore di certe
+                                <lb n="87"/>notizie desunte da un <term type="occupation">grammatico</term> bizantino del <date period="middle_ages">XII secolo</date>,
+                                <lb n="88"/>le strane cose ch'ei trova da ridire sui rapporti di questo
+                                <lb n="89"/><term type="literary" subtype="genre">poemetto</term> colla <term type="literary" subtype="school">scuola egizia</term> di <persName role="author" xml:lang="grc" corresp="#Nonno_Panopoli">Nonno</persName>, tutto ciò insieme a
+                                <lb n="90"/>molto altro mostra ch'ei giuoca di scherma su di un ter-
+                                <lb n="91" break="no"/>reno a lui poco familiare e prende in mano armi che non
+                                <lb n="92"/>sa maneggiare. Ma su questo non vogliamo insistere, chè
+                                
+                                <cb n="10"/>
+                                
+                                <lb n="93"/>convien pure nella <term type="activity" subtype="criticism">critica</term> tener conto delle intenzioni del-
+                                <lb n="94" break="no"/>l'<term type="occupation" subtype="literary">autore</term>. Certamente egli aggiungendo alle amenità altrui
+                                <lb n="95"/>anche le sue, ha reso piacevole <choice><orig>pel </orig><reg>per il</reg></choice> <term type="occupation">filologo</term> e pel non filo-
+                                <lb n="96" break="no"/>logo questo suo vivace ed innocuo <term type="literary" subtype="genre">cicaleccio erudito</term>, il quale,
+                                <lb n="97"/>poichè serio non vuol essere, non ha altro difetto che d'esser
+                                <lb n="98"/>troppo lungo.
+                            </p>
+                        </div>    
+                        
+                        <div type="biblItem" xml:id="bib_2">
+                            <head type="bibliography-title"><persName role="author" corresp="#Ernesto_Monaci">ERNESTO MONACI</persName>, , <title level="m">Il Mistero provenzale di S. Agnese</title> <note>facsimile in eliotipia dell'unico manoscritto Chigiano, con prefazione</note> - <placeName corresp="#Roma">Roma</placeName>, <persName corresp="#Martelli">Martelli</persName>, <date when="1880">1880</date>.</head>
+                            
+                            <p corresp="#z28">
+                                <lb n="99"/>Non ci occupiamo qui dell'importanza <term type="discipline">filologica</term> di questo
+                                <lb n="100"/>testo che, come ci avverte il <persName role="scholar" corresp="#Ernesto_Monaci">Monaci</persName>, è già stato pubblicato
+                                <lb n="101"/>due volte, ed è stato argomento di studio al <persName role="scholar" corresp="#Karl_Bartsch">Bartsch</persName>, al
+                                <lb n="102"/><persName role="scholar" corresp="#Paul_Meyer">Meyer</persName>, al <persName role="scholar" corresp="#Leon_Cledat">Clédat</persName>; ma richiamiamo l'attenzione dei nostri
+                                <lb n="103"/>lettori sul fatto della riproduzione dell'intero <term type="philological">manoscritto</term>
+                                <lb n="104"/>in eliotipia, fatto pressochè nuovo, in <placeName type="country" corresp="#Italia">Italia</placeName>, * e che merita
+                                <lb n="105"/>di essere segnalato con lode.
+                            </p>
+                            <p corresp="#z29">
+                                <lb n="106"/>Il <title level="m" corresp="#Mistero_S_Agnese">Mistero di S. Agnese</title> è contenuto nel <term type="literary" corresp="#cod_chigiano"><term type="philological">Codice</term> miscel-
+                                <lb n="107" break="no"/>laneo Chigiano</term>, segnato modernamente <idno type="shelfmark">C. V. 151</idno>, da c. <locus from="69r">69 r.</locus>
+                                <lb n="108"/>a <locus to="85v">85 v.</locus>, cioè in <num type="cardinal" value="36">36 </num> pagine, e queste ci si presentano ora
+                                <lb n="109"/>riprodotte fedelmente in <num type="cardinal" value="19">19</num> tavole fototipografiche, ciascuna
+                                <lb n="110"/>delle quali esibisce due pagine del <term type="literary" corresp="#cod_chigiano">Codice</term> aperto dal fo-
+                                <lb n="111" break="no"/>glio <num type="cardinal">68</num> <choice><abbr>v.</abbr><expan>verso</expan></choice> al foglio <num type="cardinal">86</num> <choice><abbr>r.</abbr><expan>recto</expan></choice> L'esecuzione materiale è assai
+                                <lb n="112"/>buona, e <choice><orig>apparisce</orig><reg >appare</reg></choice> fatta con molta diligenza: è un primo
+                                <lb n="113"/>saggio che promette assai bene; e non dubitiamo di dire
+                                <lb n="114"/>che può competere non indeguamente <choice><orig>colle</orig><reg>con le</reg></choice> tavole della <orgName type="institution" subtype="paleography" corresp="#Soc_paleografica_inglese">So-
+                                <lb n="115" break="no"/>cietà paleografica inglese</orgName>. Ma anche più dell'esecuzione
+                                <lb n="116"/>materiale (della quale infine lasciamo il giudizio agli uomini
+                                <lb n="117"/>tecnici) ci pare lodevole l'idea che ha mosso questa pubbli-
+                                <lb n="118" break="no"/>cazione a facsimile. Il <choice><abbr type="occupation">prof.</abbr> <expan>professore</expan></choice> <persName role="scholar" corresp="#Ernesto_Monaci">Monaci</persName> cita altre pubblicazioni
+                                <lb n="119"/>a facsimile di antichi <term type="philological">testi letterarii</term>, fatte fuori d'<placeName type="country" corresp="#Italia">Italia</placeName>, e
+                                <lb n="120"/>ne rileva l'importanza; ed espone quanto sarebbe utile per
+                                <lb n="121"/>gli studi, che tali pubblicazioni si facessero men rare, uscis-
+                                <lb n="122" break="no"/>sero dal campo delle edizioni di lusso, divenissero <choice><orig>a</orig><reg>un</reg></choice> po'
+                                <lb n="123"/>per volta <choice><orig>instrumenti</orig><reg>strumenti</reg></choice> scolastici. Il <choice><abbr type="occupation">prof.</abbr> <expan>professore</expan></choice> <persName role="scholar" corresp="#Ernesto_Monaci">Monaci</persName> con brevi
+                                <lb n="124"/>ma giuste considerazioni pone in chiaro quanto se ne av-
+                                <lb n="125"/>vantaggerebbero gl'insegnamenti <term type="discipline">filologico</term> e <term type="discipline">paleografico</term>,
+                                <lb n="126"/>non che la conservazione dei <term type="philological">Codici</term> medesimi, e special-
+                                <lb n="126"/>mente degli unici (com'è questo della <title level="m" corresp="#Mistero_S_Agnese">S. Agnese</title>), che
+                                <lb n="127"/>tanto hanno da temere, benchè gelosamente custoditi, non
+                                <lb n="128"/>solo dal tempo e dal fuoco, ma anche da certi <term type="occupation"> bibliofili </term>.
+                            </p>
+                            
+                            <p corresp="#z30">
+                                <lb n="129"/>Facciamo voto che questo tentativo promosso dal <term type="occupation"> pro-
+                                <lb n="130" break="no"/>fessore </term> <persName role="scholar" corresp="#Ernesto_Monaci">Monaci</persName>, e lodevolmente attuato dalla <orgName type="publisher" corresp="#Eliotipia_Martelli">eliotipia Mar-
+                                <lb n="131" break="no"/>telli</orgName>, sia accolto con favore, e possa essere principio di
+                                <lb n="132"/>qualche coraggiosa impresa <term type="discipline">paleografica</term> in <placeName type="country" corresp="#Italia">Italia</placeName>. È un
+                                <lb n="133"/>voto che abbiamo espresso fugacemente altra volta, e sul
+                                <lb n="134"/>quale non ci dispiace d'insistere. L'attività delle pubblica-
+                                <lb n="135" break="no"/>zioni di facsimili <term type="discipline">paleografici</term> fuori d'<placeName type="country" corresp="#Italia">Italia</placeName> è vivissima; le
+                                <lb n="136"/>collezioni di <persName role="scholar" corresp="#Arndt">Arndt</persName>, di <persName role="scholar" corresp="#Zangemeister">Zangemeister</persName> e <persName role="scholar" corresp="#Wattenbach">Wattenbach</persName>, della
+                                <lb n="137"/><orgName type="institution" subtype="paleography" corresp="#Soc_paleografica_inglese">Società paleografica inglese</orgName>, la <title level="j" corresp="#Rassegna_Settimanale">Rassegna</title> a suo tempo le
+                                <lb n="138"/>ha annunciate. Ora sappiamo che il <persName role="scholar" corresp="#Sickel">Sickel</persName> e il <persName role="scholar" corresp="#Sybel">Sybel</persName> pre-
+                                <lb n="139" break="no"/>parano una grande raccolta fototipografica di <term type="philological">diplomi</term> im-
+                                <lb n="140" break="no"/>periali; e anche la <placeName type="country" corresp="#Spagna">Spagna</placeName>, che ha un'<orgName type="institution" subtype="education">accademia paleogra-
+                                <lb n="141" break="no"/>fica</orgName> in <placeName type="city" corresp="#Barcellona">Barcellona</placeName>, pubblica delle tavole di facsimili per gli
+                                <lb n="142"/>alunni della <orgName type="institution" subtype="education" corresp="#Scuola_notariato">Scuola del notariato</orgName>. Noi vediamo inoltre che
+                                <lb n="143"/>nelle collezioni <term type="discipline">paleografiche</term> straniere il materiale italiano
+                                <lb n="144"/>è largamente sfruttato. Quando l'<placeName type="country" corresp="#Italia">Italia</placeName> inizierà una colle-
+                                <lb n="145"/>zione propria, una collezione nazionale? I tentativi del <persName role="scholar" corresp="#Cecchetti">Cec-
+                                <lb n="146" break="no"/>chetti</persName>, del <persName role="scholar" corresp="#Gloria">Gloria</persName>, del <persName role="scholar" corresp="#Vayra">Vayra</persName>, del <persName role="scholar" corresp="#Foucard">Foucard</persName>, del <persName role="scholar" corresp="#Piscicelli_Taeggi">Piscicelli-
+                                <lb n="147"/>Taeggi</persName>, e per ultimo questo del <choice><abbr type="occupation">prof.</abbr> <expan>professore</expan></choice> <persName role="scholar" corresp="#Ernesto_Monaci">Monaci</persName>, dovranno ri-
+                                <lb n="148" break="no"/>manere senz'efficacia? Raccomandiamo il nostro voto agli
+                                <lb n="149"/>uomini di buona volontà.
+                            </p>
+                            <note place="foot" n="*">
+                                <lb n="1"/>Per la <term type="discipline">paleografia</term> orientale abbiamo già le pubblicazioni fotolito-
+                                <lb n="2" break="no"/>grafiche di due <term type="philological">codici biblici</term> siriaci dell'<orgName type="institution" subtype="library" corresp="#Ambrosiana">Ambrosiana</orgName> di <placeName type="city" corresp="#Milano">Milano</placeName>, a cura
+                                <lb n="3"/>del <persName role="scholar" corresp="#Ceriani">Ceriani</persName>. Ricordiamo inoltre che nel <date when="1875">1875</date> si pubblicò in facsimile
+                                <lb n="4"/>litografico l'autografo delle <title level="m" corresp="#Satire_Ariosto">Satire</title> di <persName role="author" corresp="#Lodovico_Ariosto">Lodovico Ariosto</persName>.
+                            </note>
+                        </div>
+                    </div>
+                    
+                    <!-- NOTIZIE -->
+
+                    <div type="news" xml:id="news">
+                        <pb n="7"/>
+                        <head>NOTIZIE</head>
+                        
+                        <list type="news_items">
+                            <item xml:id="news_1">
+                                <lb n="1"/>- Il <persName role="scholar" corresp="#Bursian">Bursian</persName> a <placeName type="city" corresp="#Monaco_Baviera">Monaco in Baviera</placeName> sta preparando una 
+                                <term type="activity" subtype="writing">Storia della Filologia</term>. 
+                                (<title level="j">Revue politique et littéraire</title>)
+                            </item>
+                            
+                            <item xml:id="news_2">
+                                <lb n="3"/>- È pronta per la pubblicazione l'opera di 
+                                <persName role="author" corresp="#Eugene_Muntz">Eugenio Muntz</persName> su 
+                                <persName role="artist" corresp="#Raffaello">Raffaello</persName>. 
+                                (<title level="j">Athenaeum</title>)
+                            </item>
+                            
+                            <item xml:id="news_3">
+                                <lb n="5"/>- <persName role="author" corresp="#Edmond_Goncourt">Goncourt</persName> in questi giorni ha messo mano ad un nuovo romanzo, 
+                                di cui sarà protagonista una grande attrice tragica.
+                            </item>
+                        </list>
+                        
+                        <div type="imprint" xml:id="colophon">
+                            <p>
+                                <lb n="6"/><persName role="publisher" corresp="#Sidney_Sonnino">SIDNEY SONNINO</persName>, 
+                                <rs type="occupation">Direttore Proprietario</rs>
+                                <lb n="7"/><persName role="publisher" corresp="#Pietro_Pampaloni">PIETRO PAMPALONI</persName>, 
+                                <rs type="occupation">Gerente responsabile</rs>
+                                <lb n="8"/><placeName type="city" corresp="#Roma">ROMA</placeName>. <date when="1880">1880</date> - 
+                                <orgName type="publisher" corresp="#Tipografia_Barbera">Tipografia BARBERA</orgName>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </body>
+                <back>
+                    <!-- LISTA PERSONAGGI STORICI -->
+                    <listPerson>
+                        <person xml:id="Mazzini">
+                            <persName>
+                                <forename>Giuseppe</forename>
+                                <surname>Mazzini</surname>
+                            </persName>
+                            <birth when="1805"><placeName>Genova</placeName></birth>
+                            <death when="1872"><placeName>Pisa</placeName></death>
+                            <note>Patriota, politico e filosofo italiano, fondatore della Giovine Italia e figura centrale del Risorgimento. Fu esule per gran parte della vita e ispiratore dell'unità d'Italia con le sue idee repubblicane e democratiche.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Giuseppe_Mazzini"/>
+                        </person>
+                        <person xml:id="Agostino_Bertani">
+                            <persName>
+                                <forename>Agostino</forename>
+                                <surname>Bertani</surname>
+                            </persName>
+                            <birth when="1812"><placeName>Milano</placeName></birth>
+                            <death when="1886"><placeName>Roma</placeName></death>
+                            <note>Medico, patriota e politico italiano. Partecipò alla difesa della Repubblica Romana nel 1849, fu medico di Garibaldi e deputato della Sinistra storica. Si occupò di riforme sanitarie e sociali.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Agostino_Bertani"/>
+                        </person>
+                        
+                        <person xml:id="Stefano_Jacini">
+                            <persName>
+                                <forename>Stefano</forename>
+                                <surname>Jacini</surname>
+                            </persName>
+                            <birth when="1826"><placeName>Casalbuttano ed Uniti</placeName></birth>
+                            <death when="1891"><placeName>Milano</placeName></death>
+                            <note>Economista, politico e statista italiano. Fu ministro dei Lavori Pubblici e promosse l'inchiesta agraria che porta il suo nome (Inchiesta Jacini) per conoscere le condizioni dell'agricoltura italiana dopo l'Unità.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Stefano_Jacini"/>
+                        </person>
+                        
+                        <person xml:id="Giuseppe_Majorana">
+                            <persName>
+                                <forename>Giuseppe</forename>
+                                <surname>Majorana</surname>
+                            </persName>
+                            <birth when="1835"><placeName>Catania</placeName></birth>
+                            <death when="1914"><placeName>Roma</placeName></death>
+                            <note>Politico e giurista italiano, fu deputato e senatore del Regno. Ricoprì la carica di Ministro di Agricoltura, Industria e Commercio nel 1877, quando fu avviata l'inchiesta agraria.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Giuseppe_Majorana"/>
+                        </person>
+                        
+                        <person xml:id="Giovanni_Verga">
+                            <persName>
+                                <forename>Giovanni</forename>
+                                <surname>Verga</surname>
+                            </persName>
+                            <birth when="1840"><placeName>Catania</placeName></birth>
+                            <death when="1922"><placeName>Catania</placeName></death>
+                            <note>Scrittore e drammaturgo italiano, principale esponente del Verismo. Autore di novelle e romanzi come "Vita dei campi", "Novelle rusticane", "I Malavoglia" e "Mastro-don Gesualdo", che ritraggono la vita e le condizioni sociali della Sicilia dell'Ottocento.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Giovanni_Verga"/>
+                        </person>
+                        
+                        <person xml:id="Mazzaro">
+                            <persName>
+                                <forename>Mazzarò</forename>
+                            </persName>
+                            <note>Personaggio fittizio, simbolo dell'accumulatore ossessivo. Rappresenta l'ascesa sociale di un contadino che diventa ricco proprietario terriero, ma rimane privo di affetti e legami umani.</note>
+                        </person>
+                        <!-- PERSONE DELLA BIBLIOGRAFIA -->
+                        <person xml:id="Ettore_Novelli">
+                            <persName>
+                                <forename>Ettore</forename>
+                                <surname>Novelli</surname>
+                            </persName>
+                            <birth when="1846"><placeName>Firenze</placeName></birth>
+                            <death when="1922"><placeName>Roma</placeName></death>
+                            <note>Poeta e traduttore italiano, appartenente alla scuola romantica romana. Tradusse in versi italiani il poemetto "Ero e Leandro" di Museo.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Ettore_Novelli"/>
+                        </person>
+                        
+                        <person xml:id="Museo">
+                            <persName>
+                                <forename>Museo</forename>
+                                <surname>Grammatico</surname>
+                            </persName>
+                            <note>Poeta greco della tarda antichità (V/VI secolo d.C.), autore del poemetto epico "Ero e Leandro". Apparteneva alla scuola epica egiziana.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Museo_(poeta)"/>
+                        </person>
+                        
+                        <person xml:id="Nonno_Panopoli">
+                            <persName>
+                                <forename>Nonno</forename>
+                                <surname>di Panopoli</surname>
+                            </persName>
+                            <birth when="c. 400"><placeName>Panopoli</placeName></birth>
+                            <death when="c. 470"><placeName>Egitto</placeName></death>
+                            <note>Poeta epico greco del V secolo d.C., autore delle "Dionisiache". Considerato il caposcuola della poesia epica egiziana.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Nonno_di_Panopoli"/>
+                        </person>
+                        
+                        <person xml:id="Omero">
+                            <persName>
+                                <forename>Omero</forename>
+                            </persName>
+                            <note>Poeta greco dell'antichità, tradizionalmente ritenuto autore dell'Iliade e dell'Odissea. Figura centrale della letteratura greca.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Omero"/>
+                        </person>
+                        
+                        <person xml:id="Rohde">
+                            <persName>
+                                <forename>Erwin</forename>
+                                <surname>Rohde</surname>
+                            </persName>
+                            <birth when="1845"><placeName>Amburgo</placeName></birth>
+                            <death when="1898"><placeName>Heidelberg</placeName></death>
+                            <note>Filologo classico tedesco, autore del fondamentale studio "Der griechische Roman und seine Vorläufer" (1876).</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Erwin_Rohde"/>
+                        </person>
+                        
+                        <person xml:id="Ernesto_Monaci">
+                            <persName>
+                                <forename>Ernesto</forename>
+                                <surname>Monaci</surname>
+                            </persName>
+                            <birth when="1844"><placeName>Roma</placeName></birth>
+                            <death when="1918"><placeName>Roma</placeName></death>
+                            <note>Filologo e paleografo italiano, fondatore della Scuola paleografica romana e studioso di letterature romanze.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Ernesto_Monaci"/>
+                        </person>
+                        
+                        <person xml:id="Karl_Bartsch">
+                            <persName>
+                                <forename>Karl</forename>
+                                <surname>Bartsch</surname>
+                            </persName>
+                            <birth when="1832"><placeName>Sprottau</placeName></birth>
+                            <death when="1888"><placeName>Heidelberg</placeName></death>
+                            <note>Filologo tedesco, studioso di letterature romanze e provenzali. Curò numerose edizioni critiche.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Karl_Bartsch"/>
+                        </person>
+                        
+                        <person xml:id="Paul_Meyer">
+                            <persName>
+                                <forename>Paul</forename>
+                                <surname>Meyer</surname>
+                            </persName>
+                            <birth when="1840"><placeName>Parigi</placeName></birth>
+                            <death when="1917"><placeName>Parigi</placeName></death>
+                            <note>Filologo romanzo francese, direttore della "Revue critique" e studioso di letteratura medievale.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Paul_Meyer"/>
+                        </person>
+                        
+                        <person xml:id="Leon_Cledat">
+                            <persName>
+                                <forename>Léon</forename>
+                                <surname>Clédat</surname>
+                            </persName>
+                            <birth when="1851"><placeName>Parigi</placeName></birth>
+                            <death when="1930"><placeName>Lione</placeName></death>
+                            <note>Filologo e linguista francese, specialista di lingua e letteratura francese antica.</note>
+                            <ptr target="https://fr.wikipedia.org/wiki/L%C3%A9on_Cl%C3%A9dat"/>
+                        </person>
+                        
+                        <person xml:id="Arndt">
+                            <persName>
+                                <forename>Wilhelm</forename>
+                                <surname>Arndt</surname>
+                            </persName>
+                            <birth when="1838"><placeName>Litzmannstadt</placeName></birth>
+                            <death when="1895"><placeName>Lipsia</placeName></death>
+                            <note>Paleografo tedesco, professore a Lipsia e autore di importanti raccolte di facsimili.</note>
+                            <ptr target="https://de.wikipedia.org/wiki/Wilhelm_Arndt"/>
+                        </person>
+                        
+                        <person xml:id="Zangemeister">
+                            <persName>
+                                <forename>Karl</forename>
+                                <surname>Zangemeister</surname>
+                            </persName>
+                            <birth when="1837"><placeName>Hallerbach</placeName></birth>
+                            <death when="1902"><placeName>Heidelberg</placeName></death>
+                            <note>Filologo classico e paleografo tedesco, curatore di collezioni di facsimili.</note>
+                            <ptr target="https://de.wikipedia.org/wiki/Karl_Zangemeister"/>
+                        </person>
+                        
+                        <person xml:id="Wattenbach">
+                            <persName>
+                                <forename>Wilhelm</forename>
+                                <surname>Wattenbach</surname>
+                            </persName>
+                            <birth when="1819"><placeName>Rantzau</placeName></birth>
+                            <death when="1897"><placeName>Friburgo</placeName></death>
+                            <note>Paleografo e storico tedesco, autore di "Das Schriftwesen im Mittelalter".</note>
+                            <ptr target="https://de.wikipedia.org/wiki/Wilhelm_Wattenbach"/>
+                        </person>
+                        
+                        <person xml:id="Sickel">
+                            <persName>
+                                <forename>Theodor</forename>
+                                <surname>von Sickel</surname>
+                            </persName>
+                            <birth when="1826"><placeName>Aken</placeName></birth>
+                            <death when="1908"><placeName>Merano</placeName></death>
+                            <note>Storico e paleografo tedesco, fondatore dell'Istituto austriaco di ricerche storiche.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Theodor_von_Sickel"/>
+                        </person>
+                        
+                        <person xml:id="Sybel">
+                            <persName>
+                                <forename>Heinrich von</forename>
+                                <surname>Sybel</surname>
+                            </persName>
+                            <birth when="1817"><placeName>Düsseldorf</placeName></birth>
+                            <death when="1895"><placeName>Marburgo</placeName></death>
+                            <note>Storico tedesco, fondatore della "Historische Zeitschrift" e promotore di edizioni di fonti.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Heinrich_von_Sybel"/>
+                        </person>
+                        
+                        <person xml:id="Cecchetti">
+                            <persName>
+                                <forename>Bartolomeo</forename>
+                                <surname>Cecchetti</surname>
+                            </persName>
+                            <birth when="1831"><placeName>Venezia</placeName></birth>
+                            <death when="1889"><placeName>Venezia</placeName></death>
+                            <note>Paleografo e archivista italiano, direttore dell'Archivio di Stato di Venezia.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Bartolomeo_Cecchetti"/>
+                        </person>
+                        
+                        <person xml:id="Gloria">
+                            <persName>
+                                <forename>Andrea</forename>
+                                <surname>Gloria</surname>
+                            </persName>
+                            <birth when="1821"><placeName>Padova</placeName></birth>
+                            <death when="1880"><placeName>Padova</placeName></death>
+                            <note>Storico e paleografo italiano, professore all'Università di Padova.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Andrea_Gloria"/>
+                        </person>
+                        
+                        <person xml:id="Vayra">
+                            <persName>
+                                <forename>Federico</forename>
+                                <surname>Vayra</surname>
+                            </persName>
+                            <birth when="1828"><placeName>Torino</placeName></birth>
+                            <death when="1906"><placeName>Torino</placeName></death>
+                            <note>Paleografo e archivista italiano, sovrintendente agli Archivi piemontesi.</note>
+                        </person>
+                        
+                        <person xml:id="Foucard">
+                            <persName>
+                                <forename>Cesare</forename>
+                                <surname>Foucard</surname>
+                            </persName>
+                            <birth when="1825"><placeName>Firenze</placeName></birth>
+                            <death when="1903"><placeName>Firenze</placeName></death>
+                            <note>Paleografo italiano, direttore dell'Archivio di Stato di Firenze.</note>
+                        </person>
+                        
+                        <person xml:id="Piscicelli_Taeggi">
+                            <persName>
+                                <forename>Mario</forename>
+                                <surname>Piscicelli Taeggi</surname>
+                            </persName>
+                            <birth when="1837"><placeName>Napoli</placeName></birth>
+                            <death when="1912"><placeName>Roma</placeName></death>
+                            <note>Storico e paleografo italiano, direttore della Biblioteca Casanatense.</note>
+                        </person>
+                        
+                        <person xml:id="Ceriani">
+                            <persName>
+                                <forename>Antonio Maria</forename>
+                                <surname>Ceriani</surname>
+                            </persName>
+                            <birth when="1828"><placeName>Milano</placeName></birth>
+                            <death when="1907"><placeName>Milano</placeName></death>
+                            <note>Bibliotecario e orientalista italiano, prefetto della Biblioteca Ambrosiana.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Antonio_Maria_Ceriani"/>
+                        </person>
+                        
+                        <person xml:id="Lodovico_Ariosto">
+                            <persName>
+                                <forename>Lodovico</forename>
+                                <surname>Ariosto</surname>
+                            </persName>
+                            <birth when="1474"><placeName>Reggio Emilia</placeName></birth>
+                            <death when="1533"><placeName>Ferrara</placeName></death>
+                            <note>Poeta italiano, autore dell'Orlando furioso.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Ludovico_Ariosto"/>
+                        </person>
+                        
+                        <person xml:id="Bursian">
+                            <persName>
+                                <forename>Conrad</forename>
+                                <surname>Bursian</surname>
+                            </persName>
+                            <birth when="1830"><placeName>Mutzschen</placeName></birth>
+                            <death when="1883"><placeName>Monaco di Baviera</placeName></death>
+                            <note>Filologo classico tedesco, autore di una "Geschichte der classischen Philologie in Deutschland".</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Conrad_Bursian"/>
+                        </person>
+                        
+                        <person xml:id="Eugene_Muntz">
+                            <persName>
+                                <forename>Eugène</forename>
+                                <surname>Müntz</surname>
+                            </persName>
+                            <birth when="1845"><placeName>Soultz-sous-Forêts</placeName></birth>
+                            <death when="1902"><placeName>Parigi</placeName></death>
+                            <note>Storico dell'arte francese, specialista del Rinascimento italiano e di Raffaello.</note>
+                            <ptr target="https://fr.wikipedia.org/wiki/Eug%C3%A8ne_M%C3%BCntz"/>
+                        </person>
+                        
+                        <person xml:id="Raffaello">
+                            <persName>
+                                <forename>Raffaello</forename>
+                                <surname>Sanzio</surname>
+                            </persName>
+                            <birth when="1483"><placeName>Urbino</placeName></birth>
+                            <death when="1520"><placeName>Roma</placeName></death>
+                            <note>Pittore e architetto italiano, uno dei massimi esponenti del Rinascimento.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Raffaello_Sanzio"/>
+                        </person>
+                        
+                        <person xml:id="Edmond_Goncourt">
+                            <persName>
+                                <forename>Edmond</forename>
+                                <surname>de Goncourt</surname>
+                            </persName>
+                            <birth when="1822"><placeName>Nancy</placeName></birth>
+                            <death when="1896"><placeName>Champlitte</placeName></death>
+                            <note>Scrittore e critico d'arte francese, fondatore con il fratello Jules del naturalismo e dell'Académie Goncourt.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Edmond_de_Goncourt"/>
+                        </person>
+                        
+                        <person xml:id="Sidney_Sonnino">
+                            <persName>
+                                <forename>Sidney</forename>
+                                <surname>Sonnino</surname>
+                            </persName>
+                            <birth when="1847"><placeName>Pisa</placeName></birth>
+                            <death when="1922"><placeName>Roma</placeName></death>
+                            <note>Politico italiano, più volte ministro e presidente del Consiglio. Fu direttore della Rassegna Settimanale.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Sidney_Sonnino"/>
+                        </person>
+                        
+                        <person xml:id="Pietro_Pampaloni">
+                            <persName>
+                                <forename>Pietro</forename>
+                                <surname>Pampaloni</surname>
+                            </persName>
+                            <note>Gerente responsabile della Rassegna Settimanale.</note>
+                        </person>
+                    </listPerson>
+                    
+                    <!-- LISTA LUOGHI -->
+                    <listPlace>
+                        <place xml:id="Toscana">
+                            <placeName>Toscana</placeName>
+                            <country>Italia</country>
+                           <region>Toscana</region>
+                            <note>Regione dell'Italia centrale, nota per il suo patrimonio artistico, paesaggistico e culturale. Fu il cuore del Rinascimento e mantenne a lungo la sua identità regionale anche dopo l'Unità d'Italia.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Toscana"/>
+                        </place>
+                        
+                        <place xml:id="Firenze">
+                            <placeName>Firenze</placeName>
+                            <country>Italia</country>
+                           <region>Toscana</region>
+                            <settlement>Firenze</settlement>
+                            <note>Capoluogo della Toscana, fu capitale d'Italia dal 1865 al 1871. Centro culturale e artistico di fama mondiale, sede di importanti istituzioni.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Firenze"/>
+                        </place>
+                        
+                        <place xml:id="Inghilterra">
+                            <placeName>Inghilterra</placeName>
+                            <country>Regno Unito</country>
+                            <note>Nazione costitutiva del Regno Unito. Nell'Ottocento era il cuore della rivoluzione industriale e un punto di riferimento per le inchieste agrarie e sociali.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Inghilterra"/>
+                        </place>
+                        
+                        <place xml:id="Italia">
+                            <placeName>Italia</placeName>
+                            <country>Italia</country>
+                            <note>Stato dell'Europa meridionale, unificato nel 1861. Nel periodo dell'inchiesta agraria (1877) era in piena fase di costruzione nazionale e di sviluppo economico.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Italia"/>
+                        </place>
+                        
+                        <place xml:id="Biviere_Lentini">
+                            <placeName>Biviere di Lentini</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <settlement>Lentini</settlement>
+                            <note>Lago della Sicilia orientale, in provincia di Siracusa. Area umida di grande importanza naturalistica, citato da Verga in "La roba" come esempio di paesaggio siciliano.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Biviere_di_Lentini"/>
+                        </place>
+                        
+                        <place xml:id="Catania">
+                            <placeName>Catania</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <settlement>Catania</settlement>
+                            <note>Città della Sicilia orientale, ai piedi dell'Etna. Patria di Giovanni Verga e centro importante della cultura siciliana.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Catania"/>
+                        </place>
+                        
+                        <place xml:id="Piana_Catania">
+                            <placeName>Piana di Catania</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <note>Vasta pianura della Sicilia orientale, tra Catania e Siracusa. Zona agricola di grande fertilità, descritta da Verga in "La roba".</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Piana_di_Catania"/>
+                        </place>
+                        
+                        <place xml:id="Francofonte">
+                            <placeName>Francofonte</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <settlement>Francofonte</settlement>
+                            <note>Comune in provincia di Siracusa, noto per la produzione di agrumi. Citato da Verga in "La roba".</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Francofonte"/>
+                        </place>
+                        
+                        <place xml:id="Resecone">
+                            <placeName>Resecone</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <note>Località della Sicilia, citata da Verga in "La roba".</note>
+                        </place>
+                        
+                        <place xml:id="Passaneto">
+                            <placeName>Passaneto</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <note>Località della Sicilia, citata da Verga in "La roba".</note>
+                        </place>
+                        
+                        <place xml:id="Passinatello">
+                            <placeName>Passinatello</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <note>Località della Sicilia, citata da Verga in "La roba".</note>
+                        </place>
+                        
+                        <place xml:id="Cunziria">
+                            <placeName>Cunziria</placeName>
+                            <country>Italia</country>
+                           <region>Sicilia</region>
+                            <note>Vecchio bordo del settecento a Vizzini. Il luogo è divenuto palcoscenico naturale per le rappresentazioni teatrali</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Cunziria"/>
+                        </place>
+                        <!-- LUOGHI DELLA BIBLIOGRAFIA E NOTIZIE -->
+                        <place xml:id="Roma">
+                            <placeName>Roma</placeName>
+                            <country>Italia</country>
+                           <region>Lazio</region>
+                            <settlement>Roma</settlement>
+                            <note>Capitale d'Italia dal 1871. Centro culturale e politico, sede di numerose istituzioni scientifiche e accademiche.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Roma"/>
+                        </place>
+                        
+                        <place xml:id="Imola">
+                            <placeName>Imola</placeName>
+                            <country>Italia</country>
+                           <region>Emilia-Romagna</region>
+                            <settlement>Imola</settlement>
+                            <note>Città in provincia di Bologna, nota per la tipografia Galeati attiva nell'Ottocento.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Imola"/>
+                        </place>
+                        
+                        <place xml:id="Milano">
+                            <placeName>Milano</placeName>
+                            <country>Italia</country>
+                           <region>Lombardia</region>
+                            <settlement>Milano</settlement>
+                            <note>Importante centro economico e culturale, sede della Biblioteca Ambrosiana e di molte istituzioni editoriali.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Milano"/>
+                        </place>
+                        
+                        <place xml:id="Monaco_Baviera">
+                            <placeName>Monaco di Baviera</placeName>
+                            <country>Germania</country>
+                           <region>Baviera</region>
+                            <settlement>Monaco di Baviera</settlement>
+                            <note>Città della Germania meridionale, importante centro universitario e culturale.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Monaco_di_Baviera"/>
+                        </place>
+                        
+                        <place xml:id="Barcellona">
+                            <placeName>Barcellona</placeName>
+                            <country>Spagna</country>
+                           <region>Catalogna</region>
+                            <settlement>Barcellona</settlement>
+                            <note>Città spagnola, sede di un'Accademia paleografica e di importanti archivi.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Barcellona"/>
+                        </place>
+                        
+                        <place xml:id="Spagna">
+                            <placeName>Spagna</placeName>
+                            <country>Spagna</country>
+                            <note>Stato europeo, con una ricca tradizione archivistica e paleografica.</note>
+                            <ptr target="https://it.wikipedia.org/wiki/Spagna"/>
+                        </place>
+                    </listPlace>
+                    
+                    <!-- LISTA ORGANIZZAZIONI -->
+                    <listOrg>
+                        <!-- Istituzioni politiche/legislative -->
+                        <org xml:id="Parlamento">
+                            <orgName>Parlamento</orgName>
+                            <desc>Istituzione legislativa del Regno d'Italia, composta dalla Camera dei deputati e dal Senato del Regno. Durante il periodo dell'inchiesta agraria (1877) aveva sede a Roma, dopo i trasferimenti da Torino (1861-1865) e Firenze (1865-1871).</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Parlamento_del_Regno_d%27Italia"/>
+                        </org>
+                        
+                        <org xml:id="Senato">
+                            <orgName>Senato del Regno</orgName>
+                            <desc>Camera alta del Parlamento del Regno d'Italia, composta da senatori di nomina regia (vitalizi) e di diritto. Aveva funzione legislativa e di controllo insieme alla Camera dei deputati.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Senato_del_Regno"/>
+                        </org>
+                        
+                        <org xml:id="Camera">
+                            <orgName>Camera dei deputati</orgName>
+                            <desc>Camera bassa del Parlamento del Regno d'Italia, composta da deputati eletti dai cittadini maschi con diritto di voto (in base al censo e all'istruzione). Aveva funzione legislativa e rappresentativa.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Camera_dei_deputati_del_Regno_d%27Italia"/>
+                        </org>
+                        
+                        <!-- Ministeri e governo -->
+                        <org xml:id="Ministero">
+                            <orgName>Ministero di Agricoltura, Industria e Commercio</orgName>
+                            <desc>Dicastero del Regno d'Italia istituito nel 1861 con competenze su agricoltura, industria, commercio e statistica. Fu il promotore e coordinatore dell'inchiesta agraria del 1877 voluta dal Parlamento.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Ministero_dell%27agricoltura,_dell%27industria_e_del_commercio"/>
+                        </org>
+                        
+                        <org xml:id="Governo">
+                            <orgName>Governo del Regno d'Italia</orgName>
+                            <desc>Esecutivo del Regno d'Italia, guidato dal Presidente del Consiglio dei ministri e composto dai vari ministeri. Nel 1877 era in carica il governo Depretis I.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Governo_depretis_I"/>
+                        </org>
+                        
+                        <!-- Giunte e commissioni -->
+                        <org xml:id="Giunta_Inchiesta">
+                            <orgName>Giunta parlamentare d'inchiesta agraria</orgName>
+                            <desc>Commissione bicamerale istituita nel 1877 con legge del 15 marzo. Composta da 12 membri (8 eletti da Camera e Senato, 4 nominati dal governo), era presieduta da Stefano Jacini. Aveva il compito di indagare sulle condizioni dell'agricoltura italiana e proporre riforme.</desc>
+                            <ptr target="https://dgagaeta.cultura.gov.it/public/uploads/documents/Quaderni/540ed16b279a2.pdf"/>
+                        </org>
+                        
+                        <!-- Organizzazioni agricole -->
+                        <org xml:id="Comizi">
+                            <orgName>Comizi agrari</orgName>
+                            <desc>Associazioni di agricoltori e proprietari terrieri, sorti nell'Ottocento per promuovere lo sviluppo dell'agricoltura attraverso la diffusione di conoscenze tecniche, mostre, concorsi e pubblicazioni. Ebbero un ruolo importante nella modernizzazione agricola.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Comizio_agrario"/>
+                        </org>
+                        
+                        <!-- Stato e istituzioni generali -->
+                        <org xml:id="Stato">
+                            <orgName>Stato italiano</orgName>
+                            <desc>Lo Stato unitario italiano, nato nel 1861 con l'Unificazione. Nel periodo dell'inchiesta agraria (1877) era in piena fase di costruzione amministrativa e di consolidamento delle istituzioni nazionali.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Italia"/>
+                        </org>
+                        
+                        <!-- Riferimenti collettivi -->
+                        <org xml:id="alti_corpi">
+                            <orgName>Alti corpi dello Stato</orgName>
+                            <desc>Espressione che indica collettivamente le massime istituzioni dello Stato: Parlamento (Camera e Senato), Governo e Corte dei Conti. Rappresentano i vertici del potere legislativo, esecutivo e di controllo.</desc>
+                        </org>
+                        <!-- ORGANIZZAZIONI DELLA BIBLIOGRAFIA E NOTIZIE -->
+                        <org xml:id="Tip_Galeati">
+                            <orgName>Tipografia Galeati</orgName>
+                            <desc>Tipografia attiva a Imola nell'Ottocento, specializzata in pubblicazioni erudite e letterarie.</desc>
+                        </org>
+                        
+                        <org xml:id="Martelli">
+                            <orgName>Martelli Editore</orgName>
+                            <desc>Casa editrice romana, attiva nella seconda metà dell'Ottocento.</desc>
+                        </org>
+                        
+                        <org xml:id="Eliotipia_Martelli">
+                            <orgName>Eliotipia Martelli</orgName>
+                            <desc>Laboratorio fototipografico di Roma, noto per le riproduzioni in facsimile di manoscritti.</desc>
+                        </org>
+                        
+                        <org xml:id="Soc_paleografica_inglese">
+                            <orgName>Palaeographical Society (Londra)</orgName>
+                            <desc>Società scientifica inglese fondata nel 1873 per la pubblicazione di facsimili paleografici.</desc>
+                            <ptr target="https://en.wikipedia.org/wiki/Palaeographical_Society"/>
+                        </org>
+                        
+                        <org xml:id="Accademia_paleografica_Barcellona">
+                            <orgName>Accademia paleografica di Barcellona</orgName>
+                            <desc>Istituzione spagnola dedicata allo studio e alla diffusione della paleografia.</desc>
+                        </org>
+                        
+                        <org xml:id="Scuola_notariato">
+                            <orgName>Scuola del notariato di Barcellona</orgName>
+                            <desc>Istituto per la formazione dei notai, con un programma di studi paleografici.</desc>
+                        </org>
+                        
+                        <org xml:id="Ambrosiana">
+                            <orgName>Biblioteca Ambrosiana</orgName>
+                            <desc>Biblioteca di Milano fondata nel 1607 da Federico Borromeo. Custodisce importanti manoscritti, tra cui codici biblici siriaci.</desc>
+                            <ptr target="https://it.wikipedia.org/wiki/Biblioteca_Ambrosiana"/>
+                        </org>
+                        
+                        <org xml:id="Tipografia_Barbera">
+                            <orgName>Tipografia Barbera</orgName>
+                            <desc>Tipografia storica di Roma, attiva nel XIX secolo. Pubblicava la Rassegna Settimanale.</desc>
+                        </org>
+                    </listOrg>
+                </back>
+            </text>
+        </group>
+    </text>
+</TEI>
